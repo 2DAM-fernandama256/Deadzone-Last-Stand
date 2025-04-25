@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 50b1de13fb9c4b343a22e0bcef18d172
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8592174961052150546
+    second: city-removebg-preview_0
+  - first:
+      213: -5839070188483085668
+    second: city-removebg-preview_1
+  - first:
+      213: -7365074382898117546
+    second: city-removebg-preview_2
+  - first:
+      213: 999174261931860316
+    second: city-removebg-preview_3
+  - first:
+      213: 7638218444259964305
+    second: city-removebg-preview_4
+  - first:
+      213: 3591472969170927239
+    second: city-removebg-preview_5
+  - first:
+      213: -6695453084236402556
+    second: city-removebg-preview_6
+  - first:
+      213: -71564367873902225
+    second: city-removebg-preview_7
+  - first:
+      213: -1431839694246585870
+    second: city-removebg-preview_8
+  - first:
+      213: 6548290152308328842
+    second: city-removebg-preview_9
+  - first:
+      213: 5167687177683494383
+    second: city-removebg-preview_10
+  - first:
+      213: -6078312970065710300
+    second: city-removebg-preview_11
+  - first:
+      213: 847660398555422346
+    second: city-removebg-preview_12
+  - first:
+      213: -6414403221879655280
+    second: city-removebg-preview_13
+  - first:
+      213: 4029876116373564504
+    second: city-removebg-preview_14
+  - first:
+      213: -1926361946982687900
+    second: city-removebg-preview_15
+  - first:
+      213: 5010656851364064721
+    second: city-removebg-preview_16
+  - first:
+      213: 4361972474030811128
+    second: city-removebg-preview_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: city-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 69
+        width: 191
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee41b7e656672c880800000000000000
+      internalID: -8592174961052150546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 119
+        width: 131
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a74eca99477fea0800000000000000
+      internalID: -5839070188483085668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 226
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654470fdedff9c990800000000000000
+      internalID: -7365074382898117546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 212
+        width: 9
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51692782b7cddd00800000000000000
+      internalID: 999174261931860316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 183
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195b3feb437600a60800000000000000
+      internalID: 7638218444259964305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 139
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78eb9d313a977d130800000000000000
+      internalID: 3591472969170927239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 92
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480bbc7d4e8f413a0800000000000000
+      internalID: -6695453084236402556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 92
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69fc4a2690c10ff0800000000000000
+      internalID: -71564367873902225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 92
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9d0216265112ce0800000000000000
+      internalID: -1431839694246585870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 110
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89c68ef23330ea50800000000000000
+      internalID: 6548290152308328842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 92
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe56a28cb1057b740800000000000000
+      internalID: 5167687177683494383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 96
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4237599de8e75aba0800000000000000
+      internalID: -6078312970065710300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 18
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8edf0234ae73cb00800000000000000
+      internalID: 847660398555422346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 17
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094fdb131467bf6a0800000000000000
+      internalID: -6414403221879655280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 20
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ce6450afefce730800000000000000
+      internalID: 4029876116373564504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 21
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b5449f3003445e0800000000000000
+      internalID: -1926361946982687900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 46
+        width: 52
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddaee4dbdd698540800000000000000
+      internalID: 5010656851364064721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: city-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 12
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f763aabad6d88c30800000000000000
+      internalID: 4361972474030811128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 72bc4cb7f25553041adbde631bb8d9b7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      city-removebg-preview_0: -8592174961052150546
+      city-removebg-preview_1: -5839070188483085668
+      city-removebg-preview_10: 5167687177683494383
+      city-removebg-preview_11: -6078312970065710300
+      city-removebg-preview_12: 847660398555422346
+      city-removebg-preview_13: -6414403221879655280
+      city-removebg-preview_14: 4029876116373564504
+      city-removebg-preview_15: -1926361946982687900
+      city-removebg-preview_16: 5010656851364064721
+      city-removebg-preview_17: 4361972474030811128
+      city-removebg-preview_2: -7365074382898117546
+      city-removebg-preview_3: 999174261931860316
+      city-removebg-preview_4: 7638218444259964305
+      city-removebg-preview_5: 3591472969170927239
+      city-removebg-preview_6: -6695453084236402556
+      city-removebg-preview_7: -71564367873902225
+      city-removebg-preview_8: -1431839694246585870
+      city-removebg-preview_9: 6548290152308328842
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
