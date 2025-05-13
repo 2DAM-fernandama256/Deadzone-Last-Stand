@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +39,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "disparos.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\disparos.cs",
-              "RelativeDocumentMoniker": "Assets\\disparos.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\disparos.cs",
-              "RelativeToolTip": "Assets\\disparos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
+              "Title": "iniciarSesionplayfab.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\iniciarSesionplayfab.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\iniciarSesionplayfab.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\iniciarSesionplayfab.cs",
+              "RelativeToolTip": "Assets\\scripts\\iniciarSesionplayfab.cs",
+              "ViewState": "AgIAACYBAAAAAAAAAAAuwDcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T19:38:19.705Z",
+              "WhenOpened": "2025-05-12T07:42:59.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "movimiento_jugador.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\movimiento_jugador.cs",
-              "RelativeDocumentMoniker": "Assets\\movimiento_jugador.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\movimiento_jugador.cs",
-              "RelativeToolTip": "Assets\\movimiento_jugador.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAIwAAAABAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\movimiento_jugador.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\movimiento_jugador.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\movimiento_jugador.cs",
+              "RelativeToolTip": "Assets\\scripts\\movimiento_jugador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T19:31:35.155Z"
+              "WhenOpened": "2025-05-09T16:30:52.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "disparos.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\disparos.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\disparos.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\disparos.cs",
+              "RelativeToolTip": "Assets\\scripts\\disparos.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:29:54.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuInicial.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MenuInicial.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeToolTip": "Assets\\scripts\\MenuInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T09:12:36.178Z"
             }
           ]
         }
