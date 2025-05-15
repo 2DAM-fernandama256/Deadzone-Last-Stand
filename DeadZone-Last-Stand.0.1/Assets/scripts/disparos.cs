@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Collider2D))]
+
+// esta clase sirbe para manejar la bala a que distancia se muebe con que interactua
 public class Bala : MonoBehaviour
 {
     [Header("Configuración")]

@@ -1,7 +1,10 @@
 using UnityEngine;
 
+// Clase que maneja el control del jugador: movimiento, rotación, camara y disparo
 public class Jugador : MonoBehaviour
 {
+    //inspector de unity
+
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento = 5f;
     [SerializeField] private float multiplicadorSprint = 2f;
@@ -19,17 +22,24 @@ public class Jugador : MonoBehaviour
     [SerializeField] private Transform puntoDisparo;
     [SerializeField] private float tiempoEntreDisparos = 0.3f;
 
-    private Rigidbody2D rb;
-    private Camera camara;
-    private Vector2 inputMovimiento;
-    private bool estaSprintando;
-    private float tiempoProximoDisparo;
+    //variables internas
+
+    private Rigidbody2D rb;     
+    private Camera camara;             
+    private Vector2 inputMovimiento;   
+    private bool estaSprintando;        
+    private float tiempoProximoDisparo; 
     private Vector3 objetivoMouse;
 
+
+    // Inicializamos referencias y configuraciones
     private void Awake()
     {
+        // Inicializamos referencias
         rb = GetComponent<Rigidbody2D>();
         camara = Camera.main;
+
+        // Si no se asigno un objeto para rotar, usamos el propio transform del jugador
         if (cuerpoRotador == null) cuerpoRotador = transform;
     }
 
@@ -39,6 +49,7 @@ public class Jugador : MonoBehaviour
         ProcesarDisparo();
     }
 
+    // FixedUpdate se usa para física, asegurando que el movimiento sea suave y consistente
     private void FixedUpdate()
     {
         MoverJugador();
@@ -48,19 +59,22 @@ public class Jugador : MonoBehaviour
 
     private void ProcesarInput()
     {
-        // Movimiento WASD
+        // Capturamos movimiento 
         inputMovimiento = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
+            Input.GetAxisRaw("Horizontal"), // A/D o flechas
+            Input.GetAxisRaw("Vertical")    // W/S o flechas
         ).normalized;
 
-        // Sprint
+        // Detectamos si el jugador esta presionando Shift
         estaSprintando = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
     }
 
     private void MoverJugador()
     {
+        // Determinamos velocidad normal o con sprint
         float velocidadActual = estaSprintando ? velocidadMovimiento * multiplicadorSprint : velocidadMovimiento;
+
+        // Movimiento modificando directamente la velocidad lineal
         rb.linearVelocity = inputMovimiento * velocidadActual;
     }
 
@@ -68,12 +82,15 @@ public class Jugador : MonoBehaviour
     {
         if (camara == null) return;
 
+        // Convertimos la posición del mouse a coordenadas del mundo
         objetivoMouse = camara.ScreenToWorldPoint(Input.mousePosition);
-        objetivoMouse.z = 0;
+        objetivoMouse.z = 0; // Z se ignora porque es un juego 2D
 
+        // Calculamos direccion desde el jugador hacia el mouse para sacar el angulo
         Vector2 direccion = (objetivoMouse - cuerpoRotador.position).normalized;
         float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
 
+        // Lerp para rotación suave hacia el objetivo
         cuerpoRotador.rotation = Quaternion.Lerp(
             cuerpoRotador.rotation,
             Quaternion.Euler(0, 0, angulo),
@@ -85,15 +102,17 @@ public class Jugador : MonoBehaviour
     {
         if (camara == null) return;
 
+        // Interpolacion lineal para seguir suavemente al jugador
         camara.transform.position = Vector3.Lerp(
-            camara.transform.position,
-            transform.position + offsetCamara,
-            suavizadoCamara * Time.deltaTime
+            camara.transform.position, //la camara siga al jugador
+            transform.position + offsetCamara, 
+            suavizadoCamara * Time.deltaTime //suabizar camara 
         );
     }
 
     private void ProcesarDisparo()
     {
+        // Si se mantiene presionado el botón de disparo y se respeta el tiempo entre disparos
         if (Input.GetButton("Fire1") && Time.time >= tiempoProximoDisparo)
         {
             tiempoProximoDisparo = Time.time + tiempoEntreDisparos;
@@ -103,6 +122,7 @@ public class Jugador : MonoBehaviour
 
     private void DispararBala()
     {
+        // Verificaciones básicas de referencias
         if (prefabBala == null)
         {
             Debug.LogError("Prefab de bala no asignado en el Inspector");
@@ -125,17 +145,21 @@ public class Jugador : MonoBehaviour
             }
         }
 
+        // Calculamos direccion de disparo del punto de disparo al mouse
         Vector2 direccionDisparo = ((Vector2)objetivoMouse - (Vector2)puntoDisparo.position).normalized;
+
+        // Instanciamos clonamos)la bala en el punto de disparo si la primera bala desaparece peta el juego
         GameObject bala = Instantiate(prefabBala, puntoDisparo.position, Quaternion.identity);
 
-        if (bala.TryGetComponent(out Bala componenteBala))
+        // Llamamos al método Disparar del componente Bala si existe
+        if (bala.TryGetComponent(out Bala componenteBala))  
         {
-            componenteBala.Disparar(direccionDisparo);
+            componenteBala.Disparar(direccionDisparo); //sale la bala hacia el ratón
         }
         else
         {
             Debug.LogError("El prefab de bala no tiene el componente Bala");
-            Destroy(bala);
+            Destroy(bala); // Eliminamos el objeto si está mal configurado
         }
     }
 }

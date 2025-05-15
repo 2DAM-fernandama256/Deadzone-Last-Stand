@@ -1,48 +1,56 @@
-﻿using PlayFab;
-using PlayFab.ClientModels;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+﻿
+using PlayFab;                         
+using PlayFab.ClientModels;           
+using UnityEngine;                    
+using UnityEngine.UI;                
+using TMPro;                      
 
 public class IniciarSesionPlayFab : MonoBehaviour
 {
+    
     [Header("UI References - Login")]
-    public TMP_InputField emailInput;
-    public TMP_InputField passwordInput;
-    public TextMeshProUGUI loginStatusText;
-    public GameObject loginPanel;
+    public TMP_InputField emailInput;              
+    public TMP_InputField passwordInput;          
+    public TextMeshProUGUI loginStatusText;        
+    public GameObject loginPanel;                 
 
+    // Referencias UI para el panel de Registro
     [Header("UI References - Register")]
-    public TMP_InputField registerEmailInput;
-    public TMP_InputField registerPasswordInput;
-    public TMP_InputField usernameInput;
-    public TextMeshProUGUI registerStatusText;
-    public GameObject registerPanel;
+    public TMP_InputField registerEmailInput;      
+    public TMP_InputField registerPasswordInput;   
+    public TMP_InputField usernameInput;           
+    public TextMeshProUGUI registerStatusText;     
+    public GameObject registerPanel;               
 
+    // Configuración general
     [Header("Configuración")]
-    public float minPasswordLength = 6;
-    public GameObject loadingSpinner;
+    public float minimoTamanioPass = 6;            
+    public GameObject loadingSpinner;             
 
-    public GameObject gamePanel;
+    public GameObject gamePanel;                   
 
+    // Almacena datos de sesión devueltos por PlayFab
     private string _playFabId;
     private string _sessionTicket;
 
+    // Al iniciar la escena, se muestra el panel de login
     void Start()
     {
-        ShowLoginPanel();
-
+        VerPanelLogin();
     }
 
     #region Login
-    public void OnLoginButtonClicked()
+    // Se ejecuta cuando el usuario presiona el botón de "Iniciar sesión"
+    public void botonloginClicked()
     {
-        if (!ValidateLoginInputs())
+        // Validamos los campos antes de hacer la petición
+        if (!ValidartextosLogin())
             return;
 
-        loadingSpinner.SetActive(true);
-        SetInteractable(false);
+        loadingSpinner.SetActive(true);  // Mostrar animación de carga
+        SetInteractable(false);          // Desactivar campos de entrada
 
+        // Crear la solicitud de login
         var request = new LoginWithEmailAddressRequest
         {
             Email = emailInput.text.Trim(),
@@ -53,11 +61,13 @@ public class IniciarSesionPlayFab : MonoBehaviour
             }
         };
 
-        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
+        // Enviar solicitud de login a PlayFab
+        PlayFabClientAPI.LoginWithEmailAddress(request, SucesoLogin, OnLoginFailure);
         loginStatusText.text = "Iniciando sesión...";
     }
 
-    private bool ValidateLoginInputs()
+    // Validación de campos de login
+    private bool ValidartextosLogin()
     {
         if (string.IsNullOrWhiteSpace(emailInput.text))
         {
@@ -67,19 +77,19 @@ public class IniciarSesionPlayFab : MonoBehaviour
 
         if (string.IsNullOrWhiteSpace(passwordInput.text))
         {
-            loginStatusText.text = "Por favor ingresa tu contraseña";
+            loginStatusText.text = "Por favor ingresa tu contraseña"; 
             return false;
         }
 
-        if (!IsValidEmail(emailInput.text.Trim()))
+        if (!ValidarEmail(emailInput.text.Trim()))
         {
             loginStatusText.text = "El formato del email no es válido";
             return false;
         }
 
-        if (passwordInput.text.Length < minPasswordLength)
+        if (passwordInput.text.Length < minimoTamanioPass)
         {
-            loginStatusText.text = $"La contraseña debe tener al menos {minPasswordLength} caracteres";
+            loginStatusText.text = $"La contraseña debe tener al menos {minimoTamanioPass} caracteres";
             return false;
         }
 
@@ -88,14 +98,17 @@ public class IniciarSesionPlayFab : MonoBehaviour
     #endregion
 
     #region Registro
-    public void OnRegisterButtonClicked()
+    // Se ejecuta cuando el usuario presiona "Registrar"
+    public void BotonRegistrarClicked()
     {
-        if (!ValidateRegisterInputs())
+        // Validar campos antes de enviar la solicitud
+        if (!ValidarRegistroInputs())
             return;
 
         loadingSpinner.SetActive(true);
-        SetInteractable(false);
+        SetInteractable(false); 
 
+        // Crear solicitud de registro
         var request = new RegisterPlayFabUserRequest
         {
             Email = registerEmailInput.text.Trim(),
@@ -104,11 +117,13 @@ public class IniciarSesionPlayFab : MonoBehaviour
             RequireBothUsernameAndEmail = true
         };
 
+        // Enviar solicitud de registro a PlayFab
         PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnRegisterFailure);
         registerStatusText.text = "Registrando cuenta...";
     }
 
-    private bool ValidateRegisterInputs()
+    // Validación de campos de registro 
+    private bool ValidarRegistroInputs()
     {
         if (string.IsNullOrWhiteSpace(registerEmailInput.text))
         {
@@ -116,7 +131,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
             return false;
         }
 
-        if (!IsValidEmail(registerEmailInput.text.Trim()))
+        if (!ValidarEmail(registerEmailInput.text.Trim()))
         {
             registerStatusText.text = "El formato del email no es válido";
             return false;
@@ -140,38 +155,42 @@ public class IniciarSesionPlayFab : MonoBehaviour
             return false;
         }
 
-        if (registerPasswordInput.text.Length < minPasswordLength)
+        if (registerPasswordInput.text.Length < minimoTamanioPass)
         {
-            registerStatusText.text = $"La contraseña debe tener al menos {minPasswordLength} caracteres";
+            registerStatusText.text = $"La contraseña debe tener al menos {minimoTamanioPass} caracteres";
             return false;
         }
 
         return true;
     }
 
-    public void ShowRegisterPanel()
+    // Muestra el panel de registro y limpia el contenido previo
+    public void VerPanelRegistro() 
     {
         loginPanel.SetActive(false);
         registerPanel.SetActive(true);
         registerStatusText.text = "";
-        ClearRegisterInputs();
+        limpiarInputsRegistro();
     }
 
-    public void ShowLoginPanel()
+    // Muestra el panel de login y limpia su contenido
+    public void VerPanelLogin()
     {
-        registerPanel.SetActive(false);
+        registerPanel.SetActive(false); 
         loginPanel.SetActive(true);
         loginStatusText.text = "";
-        ClearLoginInputs();
+        LimpiarInputsLogin();
     }
 
-    private void ClearLoginInputs()
+    // Limpia campos del login
+    private void LimpiarInputsLogin()
     {
         emailInput.text = "";
         passwordInput.text = "";
     }
 
-    private void ClearRegisterInputs()
+    // Limpia campos del registro 
+    private void limpiarInputsRegistro()
     {
         registerEmailInput.text = "";
         usernameInput.text = "";
@@ -180,26 +199,29 @@ public class IniciarSesionPlayFab : MonoBehaviour
     #endregion
 
     #region Callbacks
-    private void OnLoginSuccess(LoginResult result)
+    // Callback: éxito en login
+    private void SucesoLogin(LoginResult result)
     {
-        loadingSpinner.SetActive(false);
+        loadingSpinner.SetActive(false); 
         SetInteractable(true);
 
+        // Guardamos datos de sesion
         _playFabId = result.PlayFabId;
         _sessionTicket = result.SessionTicket;
 
+        // Guardamos localmente PlayerPrefs es como almacenamiento local
         PlayerPrefs.SetString("PLAYFAB_ID", _playFabId);
         PlayerPrefs.SetString("SESSION_TICKET", _sessionTicket);
 
         loginStatusText.text = "¡Bienvenido!";
         Debug.Log("Login exitoso");
 
-        // 🔄 Activar panel de juego
+        // Cambiamos al panel del juego
         loginPanel.SetActive(false);
         gamePanel.SetActive(true);
     }
 
-
+    // Callback: fallo en login
     private void OnLoginFailure(PlayFabError error)
     {
         loadingSpinner.SetActive(false);
@@ -207,6 +229,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
 
         string errorMessage = "Error al iniciar sesión";
 
+        // Interpretamos errores comunes de PlayFab
         switch (error.Error)
         {
             case PlayFabErrorCode.InvalidEmailOrPassword:
@@ -220,20 +243,22 @@ public class IniciarSesionPlayFab : MonoBehaviour
                 break;
         }
 
-        loginStatusText.text = $"{errorMessage}";
+        loginStatusText.text = errorMessage;
         Debug.LogError(error.GenerateErrorReport());
     }
 
+    // Callback: éxito en registro
     private void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
         loadingSpinner.SetActive(false);
         SetInteractable(true);
 
         registerStatusText.text = "¡Registro exitoso!";
-        ShowLoginPanel();
+        VerPanelLogin();                      // Redirige al login automáticamente
         loginStatusText.text = "Ahora puedes iniciar sesión";
     }
 
+    // Callback: fallo en registro
     private void OnRegisterFailure(PlayFabError error)
     {
         loadingSpinner.SetActive(false);
@@ -241,6 +266,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
 
         string errorMessage = "Error al registrar";
 
+        // Interpretamos errores comunes
         switch (error.Error)
         {
             case PlayFabErrorCode.EmailAddressNotAvailable:
@@ -250,7 +276,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
                 errorMessage = "El nombre de usuario no está disponible";
                 break;
             case PlayFabErrorCode.InvalidPassword:
-                errorMessage = $"La contraseña debe tener al menos {minPasswordLength} caracteres";
+                errorMessage = $"La contraseña debe tener al menos {minimoTamanioPass} caracteres";
                 break;
         }
 
@@ -260,7 +286,8 @@ public class IniciarSesionPlayFab : MonoBehaviour
     #endregion
 
     #region Helpers
-    private bool IsValidEmail(string email)
+    // Validación básica de formato de email
+    private bool ValidarEmail(string email)
     {
         try
         {
@@ -273,6 +300,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
         }
     }
 
+    // Activa o desactiva los campos de entrada mientras carga
     private void SetInteractable(bool interactable)
     {
         emailInput.interactable = interactable;
@@ -283,6 +311,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
     }
     #endregion
 
+    // Función para cerrar sesion limpia datos y vuelve al login
     public void Logout()
     {
         PlayerPrefs.DeleteKey("PLAYFAB_ID");
@@ -290,9 +319,8 @@ public class IniciarSesionPlayFab : MonoBehaviour
         _playFabId = null;
         _sessionTicket = null;
 
-        ShowLoginPanel();
+        VerPanelLogin();
         loginStatusText.text = "Sesión cerrada";
     }
 }
-
 
