@@ -69,7 +69,7 @@ public class ArmaManager : MonoBehaviour
 
                 if (huboCambios)
                 {
-                    Debug.Log("Se guardarán las armas que no existían en PlayFab con valores por defecto.");
+                    Debug.Log("Se guardaran las armas que no existian en PlayFab con valores por defecto.");
                     GuardarArmasEnPlayFab();
                 }
                 else
@@ -117,10 +117,11 @@ public class ArmaManager : MonoBehaviour
     // Mejora específica por tipo de arma
     public bool MejorarArma(string nombreArma)
     {
+        bool esValido = true;
         if (!armasJugador.ContainsKey(nombreArma))
         {
             Debug.LogWarning("[ArmaManager] Arma no encontrada: " + nombreArma);
-            return false;
+            esValido = false;
         }
 
         arma arma = armasJugador[nombreArma];
@@ -128,7 +129,7 @@ public class ArmaManager : MonoBehaviour
         if (arma.nivel >= 4)
         {
             Debug.Log("[ArmaManager] El arma ya está al nivel máximo: " + nombreArma);
-            return false;
+            esValido = false;
         }
 
         int costo = ObtenerCostoMejora(nombreArma);
@@ -136,7 +137,7 @@ public class ArmaManager : MonoBehaviour
         if (!EconomyManager.Instance.SpendMoney(costo))
         {
             Debug.Log("[ArmaManager] No hay suficiente dinero para mejorar " + nombreArma);
-            return false;
+            esValido = false;
         }
 
         arma.nivel++;
@@ -167,7 +168,7 @@ public class ArmaManager : MonoBehaviour
         Debug.Log($"[ArmaManager] {nombreArma} mejorada a nivel {arma.nivel}");
 
         GuardarArmasEnPlayFab();
-        return true;
+        return esValido ;
     }
 
     // Costo de mejora específico por arma

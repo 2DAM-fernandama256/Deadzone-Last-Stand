@@ -63,37 +63,38 @@ public class IniciarSesionPlayFab : MonoBehaviour
 
         // Enviar solicitud de login a PlayFab
         PlayFabClientAPI.LoginWithEmailAddress(request, SucesoLogin, OnLoginFailure);
-        loginStatusText.text = "Iniciando sesión...";
+        loginStatusText.text = "Iniciando sesion...";
     }
 
     // Validación de campos de login
     private bool ValidartextosLogin()
     {
+        bool esValido = true; 
         if (string.IsNullOrWhiteSpace(emailInput.text))
         {
             loginStatusText.text = "Por favor ingresa tu email";
-            return false;
+            esValido= false;
         }
 
         if (string.IsNullOrWhiteSpace(passwordInput.text))
         {
             loginStatusText.text = "Por favor ingresa tu contraseña"; 
-            return false;
+            esValido= false;
         }
 
         if (!ValidarEmail(emailInput.text.Trim()))
         {
             loginStatusText.text = "El formato del email no es válido";
-            return false;
+            esValido = false;
         }
 
         if (passwordInput.text.Length < minimoTamanioPass)
         {
             loginStatusText.text = $"La contraseña debe tener al menos {minimoTamanioPass} caracteres";
-            return false;
+            esValido = false;
         }
 
-        return true;
+        return esValido;
     }
     #endregion
 
@@ -125,43 +126,44 @@ public class IniciarSesionPlayFab : MonoBehaviour
     // Validación de campos de registro 
     private bool ValidarRegistroInputs()
     {
+        bool esValido = true;
         if (string.IsNullOrWhiteSpace(registerEmailInput.text))
         {
             registerStatusText.text = "Por favor ingresa un email";
-            return false;
+            esValido = false;
         }
 
         if (!ValidarEmail(registerEmailInput.text.Trim()))
         {
             registerStatusText.text = "El formato del email no es válido";
-            return false;
+            esValido = false;
         }
 
         if (string.IsNullOrWhiteSpace(usernameInput.text))
         {
             registerStatusText.text = "Por favor ingresa un nombre de usuario";
-            return false;
+            esValido = false;
         }
 
         if (usernameInput.text.Trim().Length < 3)
         {
             registerStatusText.text = "El nombre de usuario debe tener al menos 3 caracteres";
-            return false;
+            esValido = false;
         }
 
         if (string.IsNullOrWhiteSpace(registerPasswordInput.text))
         {
             registerStatusText.text = "Por favor ingresa una contraseña";
-            return false;
+            esValido = false;
         }
 
         if (registerPasswordInput.text.Length < minimoTamanioPass)
         {
             registerStatusText.text = $"La contraseña debe tener al menos {minimoTamanioPass} caracteres";
-            return false;
+            esValido = false;
         }
 
-        return true;
+        return esValido;
     }
 
     // Muestra el panel de registro y limpia el contenido previo
@@ -311,7 +313,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
     }
     #endregion
 
-    // Función para cerrar sesion limpia datos y vuelve al login
+    // Funcion para cerrar sesion limpia datos y vuelve al login
     public void Logout()
     {
         PlayerPrefs.DeleteKey("PLAYFAB_ID");

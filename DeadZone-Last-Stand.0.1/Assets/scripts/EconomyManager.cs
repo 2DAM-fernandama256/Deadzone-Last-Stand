@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EconomyManager : MonoBehaviour
 {
-    public static EconomyManager Instance; // Singleton para acceso fácil
+    public static EconomyManager Instance; // Singleton para acceso facil
 
     private int _playerMoney = 50; // Valor por defecto
 
@@ -39,7 +39,7 @@ public class EconomyManager : MonoBehaviour
                 }
                 else
                 {
-                    // Si no existe, guardamos el valor inicial (50)
+                    // Si no existe, guardamos el valor inicial 
                     _playerMoney = 50;
                     SavePlayerMoney();
                 }
@@ -68,7 +68,7 @@ public class EconomyManager : MonoBehaviour
             error => Debug.LogError("Error al guardar dinero: " + error.GenerateErrorReport()));
     }
 
-    // Método público para agregar dinero (desde otras clases)
+    // Método público para agregar dinero 
     public void AddMoney(int amount)
     {
         _playerMoney += amount;
@@ -97,11 +97,11 @@ public class EconomyManager : MonoBehaviour
         return _playerMoney;
     }
 
-    // Actualizar la UI (conectar esto a tu texto de UI)
+    // Actualizar la UI 
     private void UpdateMoneyUI()
     {
-        // Aquí debes conectar esto con tu texto de UI
-        // Ejemplo: moneyText.text = _playerMoney.ToString();
+        
+        // moneyText.text = _playerMoney.ToString();
         Debug.Log("Dinero actual: " + _playerMoney);
     }
 }

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\controldecadaarma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controldecadaarma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\armamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\armamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\controldecadaarma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\controldecadaarma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\arma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +27,16 @@
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movimientospinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\disparos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,80 +58,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ControldeCadaArma.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ControldeCadaArma.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
-              "RelativeToolTip": "Assets\\scripts\\ControldeCadaArma.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Movimiento_jugador.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Movimiento_jugador.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Movimiento_jugador.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Movimiento_jugador.cs",
+              "RelativeToolTip": "Assets\\scripts\\Movimiento_jugador.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T18:30:24.205Z",
+              "WhenOpened": "2025-05-16T06:36:52.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArmaManager.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ArmaManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ArmaManager.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ArmaManager.cs",
-              "RelativeToolTip": "Assets\\scripts\\ArmaManager.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAswGcAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "MenuInicial.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MenuInicial.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeToolTip": "Assets\\scripts\\MenuInicial.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:41:51.628Z",
+              "WhenOpened": "2025-05-16T06:36:50.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Arma.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\arma.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\arma.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\arma.cs",
-              "RelativeToolTip": "Assets\\scripts\\arma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Disparos.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Disparos.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Disparos.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Disparos.cs",
+              "RelativeToolTip": "Assets\\scripts\\Disparos.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:18:22.18Z",
+              "WhenOpened": "2025-05-16T06:36:42.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MovimientoSpinner.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\movimientoSpinner.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\movimientoSpinner.cs",
               "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\movimientoSpinner.cs",
               "RelativeToolTip": "Assets\\scripts\\movimientoSpinner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T08:21:19.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Arma.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\arma.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\arma.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\arma.cs",
+              "RelativeToolTip": "Assets\\scripts\\arma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:18:22.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EconomyManager.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\EconomyManager.cs",
               "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
               "RelativeToolTip": "Assets\\scripts\\EconomyManager.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAiwDUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T07:21:26.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "iniciarSesionplayfab.cs",
+              "DocumentIndex": 3,
+              "Title": "IniciarSesionplayfab.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\iniciarSesionplayfab.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\iniciarSesionplayfab.cs",
               "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\iniciarSesionplayfab.cs",
               "RelativeToolTip": "Assets\\scripts\\iniciarSesionplayfab.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwBAAAAAAAAAAAmwDoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T07:42:59.9Z"
+              "WhenOpened": "2025-05-12T07:42:59.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArmaManager.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ArmaManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ArmaManager.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ArmaManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\ArmaManager.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwKoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:41:51.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControldeCadaArma.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ControldeCadaArma.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
+              "RelativeToolTip": "Assets\\scripts\\ControldeCadaArma.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T18:30:24.205Z",
+              "EditorCaption": ""
             }
           ]
         }

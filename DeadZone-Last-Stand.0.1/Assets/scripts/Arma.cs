@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class arma
 {
-    public string nombre;      // Nombre del arma (Pistola, Escopeta, etc.)
-    public int nivel;      // Nivel actual de mejora (1-4)
+    public string nombre;      // Nombre del arma 
+    public int nivel;      // Nivel actual de mejora 
     public float danio;          // Daño base del arma
     public float distancia;  // Alcance máximo de las balas
-    public int cargador;      // Tamaño del cargador (balas por carga)
+    public int cargador;      // Tamaño del cargador 
     public int balasActuales;       // Balas actuales en el cargador
-    public int totalBalas;         // Balas totales disponibles (en reserva)
+    public int totalBalas;         // Balas totales disponibles 
 
     // Constructor para inicializar el arma con valores por defecto
     public arma(string nombre, int nivel, float danio,
