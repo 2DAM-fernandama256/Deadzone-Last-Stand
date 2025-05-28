@@ -7,7 +7,9 @@ public class EconomyManager : MonoBehaviour
 {
     public static EconomyManager Instance; // Singleton para acceso facil
 
-    private int _playerMoney = 50; // Valor por defecto
+    private int _playerMoney = 50;
+
+    private List<MoneyTextUpdater> moneyTexts = new List<MoneyTextUpdater>();// Valor por defecto
 
     void Awake()
     {
@@ -100,8 +102,31 @@ public class EconomyManager : MonoBehaviour
     // Actualizar la UI 
     private void UpdateMoneyUI()
     {
-        
-        // moneyText.text = _playerMoney.ToString();
+        foreach (var updater in moneyTexts)
+        {
+            if (updater != null)
+            {
+                updater.UpdateText();
+            }
+        }
+
         Debug.Log("Dinero actual: " + _playerMoney);
     }
+    public void RegisterMoneyText(MoneyTextUpdater updater)
+    {
+        if (!moneyTexts.Contains(updater))
+        {
+            moneyTexts.Add(updater);
+            updater.UpdateText(); // Inicializa texto con valor actual
+        }
+    }
+
+    public void UnregisterMoneyText(MoneyTextUpdater updater)
+    {
+        if (moneyTexts.Contains(updater))
+        {
+            moneyTexts.Remove(updater);
+        }
+    }
+
 }

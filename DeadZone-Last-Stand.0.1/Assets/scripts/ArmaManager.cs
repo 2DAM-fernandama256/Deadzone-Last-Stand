@@ -55,7 +55,9 @@ public class ArmaManager : MonoBehaviour
                         );
 
                         armasJugador[nombre] = armaCargada;
+                        ActivarEstrellas(nombre, armaCargada.nivel);
                         Debug.Log($"Arma {nombre} cargada desde PlayFab.");
+ 
                     }
                     else
                     {
@@ -83,6 +85,41 @@ public class ArmaManager : MonoBehaviour
                 InicializarArmasPorDefecto();
             });
     }
+
+    void ActivarEstrellas(string nombreArma, int nivel)
+    {
+        if (nivel <= 1) return; // Nivel 1 no muestra estrellas
+
+        string nombreCuadro = $"cuadro_{nombreArma.ToLower()}"; //porlo lo escribi en minusculas
+        string prefijoEstrella = "";
+
+        switch (nombreArma)
+        {
+            case "Pistola": prefijoEstrella = "PistolaS"; break;
+            case "Francotirador": prefijoEstrella = "FrancotiradorS"; break;
+            case "Escopeta": prefijoEstrella = "EscopetaS"; break;
+            case "Fusil": prefijoEstrella = "FusilS"; break;
+            default: return;
+        }
+
+        GameObject cuadro = GameObject.Find(nombreCuadro);
+        if (cuadro == null)
+        {
+            Debug.LogWarning($"No se encontró el GameObject {nombreCuadro}");
+            return;
+        }
+
+        for (int i = 2; i <= 4; i++) // Nivel 2 a 4
+        {
+            Transform estrella = cuadro.transform.Find($"{prefijoEstrella}{i}");
+            if (estrella != null)
+            {
+                estrella.gameObject.SetActive(i <= nivel);
+            }
+        }
+    }
+
+
 
     // Método para devolver arma por defecto según nombre
     private arma ObtenerArmaPorDefecto(string nombre)
@@ -118,15 +155,16 @@ public class ArmaManager : MonoBehaviour
     public bool MejorarArma(string nombreArma)
     {
         bool esValido = true;
+
         if (!armasJugador.ContainsKey(nombreArma))
         {
             Debug.LogWarning("[ArmaManager] Arma no encontrada: " + nombreArma);
             esValido = false;
         }
 
-        arma arma = armasJugador[nombreArma];
+        arma arma = armasJugador.ContainsKey(nombreArma) ? armasJugador[nombreArma] : null;
 
-        if (arma.nivel >= 4)
+        if (esValido && arma.nivel >= 4)
         {
             Debug.Log("[ArmaManager] El arma ya está al nivel máximo: " + nombreArma);
             esValido = false;
@@ -134,42 +172,50 @@ public class ArmaManager : MonoBehaviour
 
         int costo = ObtenerCostoMejora(nombreArma);
 
-        if (!EconomyManager.Instance.SpendMoney(costo))
+        if (esValido && !EconomyManager.Instance.SpendMoney(costo))
         {
             Debug.Log("[ArmaManager] No hay suficiente dinero para mejorar " + nombreArma);
             esValido = false;
         }
 
-        arma.nivel++;
-
-        switch (nombreArma)
+        if (esValido)
         {
-            case "Pistola":
-                arma.danio += 3f;
-                arma.cargador += 2;
-                break;
+            arma.nivel++;
 
-            case "Escopeta":
-                arma.danio += 6f;
-                arma.distancia += 1f;
-                break;
+            switch (nombreArma)
+            {
+                case "Pistola":
+                    arma.danio += 3f;
+                    arma.cargador += 2;
+                    break;
 
-            case "Fusil":
-                arma.danio += 4f;
-                arma.distancia += 2f;
-                arma.cargador += 5;
-                break;
+                case "Escopeta":
+                    arma.danio += 6f;
+                    arma.distancia += 1f;
+                    break;
 
-            case "Francotirador":
-                arma.danio += 10f;
-                break;
+                case "Fusil":
+                    arma.danio += 4f;
+                    arma.distancia += 2f;
+                    arma.cargador += 5;
+                    break;
+
+                case "Francotirador":
+                    arma.danio += 10f;
+                    break;
+            }
+
+            ActivarEstrellas(nombreArma, arma.nivel);
+
+            Debug.Log($"[ArmaManager] {nombreArma} mejorada a nivel {arma.nivel}");
         }
 
-        Debug.Log($"[ArmaManager] {nombreArma} mejorada a nivel {arma.nivel}");
-
         GuardarArmasEnPlayFab();
-        return esValido ;
+
+        return esValido;
     }
+
+
 
     // Costo de mejora específico por arma
     private int ObtenerCostoMejora(string nombreArma)
@@ -185,6 +231,9 @@ public class ArmaManager : MonoBehaviour
                 return 999;
         }
     }
+
+        
+    
 
     // Guarda las armas en PlayFab como strings
     public void GuardarArmasEnPlayFab()

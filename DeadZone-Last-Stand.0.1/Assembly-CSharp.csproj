@@ -64,6 +64,7 @@
     <Compile Include="Assets\scripts\Movimiento_jugador.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\scripts\MoneyTextUpdater.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\scripts\ArmaManager.cs" />
     <Compile Include="Assets\scripts\MenuInicial.cs" />

@@ -434,6 +434,7 @@
 "Assets/scripts/EconomyManager.cs"
 "Assets/scripts/IniciarSesionplayfab.cs"
 "Assets/scripts/MenuInicial.cs"
+"Assets/scripts/MoneyTextUpdater.cs"
 "Assets/scripts/MovimientoSpinner.cs"
 "Assets/scripts/Movimiento_jugador.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
