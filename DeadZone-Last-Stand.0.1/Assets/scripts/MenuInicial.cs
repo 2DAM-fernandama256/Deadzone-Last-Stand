@@ -17,6 +17,8 @@ public class MenuInicial : MonoBehaviour
         PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
     }
 
+
+
     //para ver si se ha conectado correctamente com playfab
     private void OnLoginSuccess(LoginResult result)
     {

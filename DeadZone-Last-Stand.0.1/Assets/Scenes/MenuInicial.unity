@@ -1560,8 +1560,9 @@ GameObject:
   - component: {fileID: 382885112}
   - component: {fileID: 382885111}
   - component: {fileID: 382885110}
+  - component: {fileID: 382885113}
   m_Layer: 5
-  m_Name: francotirador
+  m_Name: Francotirador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1631,9 +1632,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528557657}
-        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: jugar
+      - m_Target: {fileID: 382885113}
+        m_TargetAssemblyTypeName: SeleccionarArmaUI, Assembly-CSharp
+        m_MethodName: SeleccionarArma
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1681,6 +1682,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382885108}
   m_CullTransparentMesh: 1
+--- !u!114 &382885113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382885108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7ed456b7af04745bc222c63e655bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuInicial: {fileID: 0}
 --- !u!1 &389104566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,8 +2325,9 @@ GameObject:
   - component: {fileID: 527855887}
   - component: {fileID: 527855886}
   - component: {fileID: 527855885}
+  - component: {fileID: 527855888}
   m_Layer: 5
-  m_Name: pistola
+  m_Name: Pistola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2382,9 +2397,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528557657}
-        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: jugar
+      - m_Target: {fileID: 527855888}
+        m_TargetAssemblyTypeName: SeleccionarArmaUI, Assembly-CSharp
+        m_MethodName: SeleccionarArma
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2432,6 +2447,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527855883}
   m_CullTransparentMesh: 1
+--- !u!114 &527855888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527855883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7ed456b7af04745bc222c63e655bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuInicial: {fileID: 528557657}
 --- !u!1 &528557652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,8 +2745,9 @@ GameObject:
   - component: {fileID: 587406760}
   - component: {fileID: 587406759}
   - component: {fileID: 587406758}
+  - component: {fileID: 587406761}
   m_Layer: 5
-  m_Name: escopeta
+  m_Name: Escopeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2788,9 +2817,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528557657}
-        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: jugar
+      - m_Target: {fileID: 587406761}
+        m_TargetAssemblyTypeName: SeleccionarArmaUI, Assembly-CSharp
+        m_MethodName: SeleccionarArma
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2838,6 +2867,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587406756}
   m_CullTransparentMesh: 1
+--- !u!114 &587406761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587406756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7ed456b7af04745bc222c63e655bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuInicial: {fileID: 0}
 --- !u!1 &595327867
 GameObject:
   m_ObjectHideFlags: 0
@@ -12004,8 +12046,9 @@ GameObject:
   - component: {fileID: 2028618589}
   - component: {fileID: 2028618588}
   - component: {fileID: 2028618587}
+  - component: {fileID: 2028618590}
   m_Layer: 5
-  m_Name: fusil
+  m_Name: Fusil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12075,9 +12118,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528557657}
-        m_TargetAssemblyTypeName: MenuInicial, Assembly-CSharp
-        m_MethodName: jugar
+      - m_Target: {fileID: 2028618590}
+        m_TargetAssemblyTypeName: SeleccionarArmaUI, Assembly-CSharp
+        m_MethodName: SeleccionarArma
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12125,6 +12168,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028618585}
   m_CullTransparentMesh: 1
+--- !u!114 &2028618590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028618585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7ed456b7af04745bc222c63e655bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuInicial: {fileID: 528557657}
 --- !u!1 &2069242393
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,9 @@ public class ArmaManager : MonoBehaviour
 {
     public static ArmaManager Instance;
 
-    public Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
+    public static  Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
+
+    private string armaSeleccionada = "Pistola"; // Arma por defecto al iniciar
 
     void Awake()
     {
@@ -258,9 +260,13 @@ public class ArmaManager : MonoBehaviour
             error => Debug.LogError("[ArmaManager] Error al guardar armas: " + error.GenerateErrorReport()));
     }
 
+
+
     // Método para obtener datos de un arma desde otro script (ej. UI)
-    public arma ObtenerArma(string nombre)
+    public static arma ObtenerArma()    
     {
+        string nombre = SeleccionarArmaUI.armaSeleccionada;
+        Debug.Log("[ArmaManager] Solicitud de arma: " + nombre);
         if (armasJugador.ContainsKey(nombre))
         {
             return armasJugador[nombre];

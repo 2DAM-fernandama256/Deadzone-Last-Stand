@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -32,6 +33,11 @@ public class Bala : MonoBehaviour
         spriteRenderer.enabled = true;
         rb.linearVelocity = direccion.normalized * velocidad;
         puntoInicial = transform.position;
+    }
+    private void Start()
+    {
+        arma arma = ArmaManager.ObtenerArma();
+        Debug.Log(arma.nombre);
     }
 
     private void Update()

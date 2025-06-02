@@ -1,0 +1,55 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SeleccionarArmaUI : MonoBehaviour
+{
+    public static string armaSeleccionada = null;  
+
+    // Referencia al script MenuInicial  
+    public MenuInicial menuInicial;
+
+    // Esta función debe llamarse desde el botón de cada arma  
+    public void SeleccionarArma()
+    {
+        string nombreArma = gameObject.name; // El nombre del botón = nombre del arma  
+
+        int costo = ObtenerCostoArma(nombreArma);
+
+        Debug.Log($"[UI] Intentando seleccionar arma {nombreArma} por {costo} monedas.");
+
+        if (EconomyManager.Instance.SpendMoney(costo))
+        {
+            Debug.Log($"[UI] Arma {nombreArma} seleccionada correctamente.");
+            armaSeleccionada = nombreArma;
+
+            // Usar la referencia de instancia para llamar al método jugar  
+            if (menuInicial != null)
+            {
+                menuInicial.jugar();
+            }
+            else
+            {
+                Debug.LogError("[UI] La referencia a MenuInicial no está asignada.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"[UI] No tienes suficiente dinero para comprar {nombreArma}.");
+        }
+    }
+
+    // Costo de cada arma según su nombre  
+    private int ObtenerCostoArma(string nombreArma)
+    {
+        switch (nombreArma)
+        {
+            case "Pistola": return 0;   // Gratis o ya equipada  
+            case "Escopeta": return 200;
+            case "Fusil": return 300;
+            case "Francotirador": return 500;
+            default:
+                Debug.LogWarning($"[UI] Costo no definido para el arma {nombreArma}");
+                return 9999;
+        }
+    }
+}
