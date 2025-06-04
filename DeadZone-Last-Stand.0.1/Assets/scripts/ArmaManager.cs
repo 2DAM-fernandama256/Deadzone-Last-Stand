@@ -1,24 +1,23 @@
 using PlayFab;
 using PlayFab.ClientModels;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class ArmaManager : MonoBehaviour
 {
     public static ArmaManager Instance;
-
-    public static  Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
-
-    private string armaSeleccionada = "Pistola"; // Arma por defecto al iniciar
+    public static Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // Añade esto para persistencia entre escenas
             Debug.Log("[ArmaManager] Instance creada");
         }
-        else
+        else if (Instance != this)
         {
             Debug.Log("[ArmaManager] Instance ya existe, destruyendo objeto duplicado");
             Destroy(gameObject);
@@ -31,61 +30,67 @@ public class ArmaManager : MonoBehaviour
         CargarArmasDesdePlayFab();
     }
 
-    // Carga las armas desde PlayFab o inicializa por defecto si no existen
+    // Método optimizado para cargar armas
     public void CargarArmasDesdePlayFab()
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(),
-            resultado =>
+            resultado => ProcesarDatosArmas(resultado),
+            error => ManejarErrorCarga(error));
+    }
+
+    private void ProcesarDatosArmas(GetUserDataResult resultado)
+    {
+        armasJugador.Clear();
+        bool huboCambios = false;
+
+        string[] nombresArmas = { "Pistola", "Escopeta", "Fusil", "Francotirador" };
+
+        foreach (string nombre in nombresArmas)
+        {
+            if (resultado.Data != null && resultado.Data.TryGetValue(nombre, out var itemData))
             {
-                armasJugador.Clear();
-
-                bool huboCambios = false;
-
-                foreach (string nombre in new[] { "Pistola", "Escopeta", "Fusil", "Francotirador" })
-                {
-                    if (resultado.Data != null && resultado.Data.ContainsKey(nombre))
-                    {
-                        string[] valores = resultado.Data[nombre].Value.Split(',');
-
-                        arma armaCargada = new arma(
-                            nombre,
-                            int.Parse(valores[0]),   // nivel
-                            float.Parse(valores[1]), // daño
-                            float.Parse(valores[2]), // distancia
-                            int.Parse(valores[3]),   // cargador
-                            int.Parse(valores[4])    // totalBalas
-                        );
-
-                        armasJugador[nombre] = armaCargada;
-                        ActivarEstrellas(nombre, armaCargada.nivel);
-                        Debug.Log($"Arma {nombre} cargada desde PlayFab.");
- 
-                    }
-                    else
-                    {
-                        // No existe el arma en PlayFab, inicializar por defecto
-                        arma armaDefecto = ObtenerArmaPorDefecto(nombre);
-                        armasJugador[nombre] = armaDefecto;
-                        Debug.LogWarning($"Arma {nombre} no encontrada en PlayFab. Inicializando por defecto.");
-                        huboCambios = true;
-                    }
-                }
-
-                if (huboCambios)
-                {
-                    Debug.Log("Se guardaran las armas que no existian en PlayFab con valores por defecto.");
-                    GuardarArmasEnPlayFab();
-                }
-                else
-                {
-                    Debug.Log("Todas las armas cargadas correctamente desde PlayFab.");
-                }
-            },
-            error =>
+                CargarArmaDesdeData(nombre, itemData.Value);
+            }
+            else
             {
-                Debug.LogError("Error al cargar armas: " + error.GenerateErrorReport());
-                InicializarArmasPorDefecto();
-            });
+                InicializarArmaPorDefecto(nombre);
+                huboCambios = true;
+            }
+        }
+
+        if (huboCambios) GuardarArmasEnPlayFab();
+    }
+
+    private void CargarArmaDesdeData(string nombre, string data)
+    {
+        string[] valores = data.Split(',');
+
+        if (valores.Length == 5)
+        {
+            var armaCargada = new arma(
+                nombre,
+                int.Parse(valores[0]),
+                float.Parse(valores[1]),
+                float.Parse(valores[2]),
+                int.Parse(valores[3]),
+                int.Parse(valores[4])
+            );
+
+            armasJugador[nombre] = armaCargada;
+            ActivarEstrellas(nombre, armaCargada.nivel);
+        }
+    }
+
+    private void InicializarArmaPorDefecto(string nombre)
+    {
+        armasJugador[nombre] = ObtenerArmaPorDefecto(nombre);
+        Debug.LogWarning($"Arma {nombre} no encontrada en PlayFab. Inicializando por defecto.");
+    }
+
+    private void ManejarErrorCarga(PlayFabError error)
+    {
+        Debug.LogError("Error al cargar armas: " + error.GenerateErrorReport());
+        InicializarArmasPorDefecto();
     }
 
     void ActivarEstrellas(string nombreArma, int nivel)
