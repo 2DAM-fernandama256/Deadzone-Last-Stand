@@ -1,5 +1,6 @@
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using TMPro;
 
 public class Jugador : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Jugador : MonoBehaviour
     private arma armaActual;
     private float tiempoProximoDisparo;
     private float tiempoActualEntreDisparos;
+    public TextMeshProUGUI mensajeDisparoTexto;
 
     private void Awake()
     {
@@ -126,11 +128,12 @@ public class Jugador : MonoBehaviour
             // Reducir tiempo entre disparos según nivel (mínimo 0.1 segundos)
             tiempoActualEntreDisparos = Mathf.Max(0.1f, tiempoEntreDisparosBase * Mathf.Pow(0.9f, armaActual.nivel - 1));
 
-            Debug.Log($"Disparó: {armaActual.nombre} | Balas: {armaActual.balasActuales}/{armaActual.totalBalas}");
+            string mensaje = $"{armaActual.balasActuales}/{armaActual.totalBalas}";
+            mensajeDisparoTexto.text = mensaje;
         }
         else
         {
-            Debug.Log("Sin balas. Pulsa R para recargar.");
+            Debug.LogWarning("No hay balas disponibles para disparar.");
         }
     }
 }

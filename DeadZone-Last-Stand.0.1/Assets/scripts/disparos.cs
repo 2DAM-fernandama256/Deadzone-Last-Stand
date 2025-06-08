@@ -62,14 +62,7 @@ public class Bala : MonoBehaviour
             {
                 if (objetoColisionado.CompareTag(tag))
                 {
-                    if (tag == "Enemigo")
-                    {
-                        //var enemigo = objetoColisionado.GetComponent<Enemigo>();
-                       // if (enemigo != null)
-                        //{
-                       //     enemigo.RecibirDanio(danio);
-                        //}
-                    }
+                    
                     DestruirBala();
                     return;
                 }

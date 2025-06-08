@@ -9,6 +9,16 @@
     "D:\\Program Files\\Unity\\Unity Hub\\6000.0.38f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.unity.ai.navigation@2.0.8": {
+      "name": "com.unity.ai.navigation",
+      "displayName": "AI Navigation",
+      "resolvedPath": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Library\\PackageCache\\com.unity.ai.navigation@eb5635ad590d",
+      "fingerprint": "eb5635ad590d47cef2a5c920d9475cc222db3f67",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "2.0.8",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.collab-proxy@2.7.1": {
       "name": "com.unity.collab-proxy",
       "displayName": "Version Control",
