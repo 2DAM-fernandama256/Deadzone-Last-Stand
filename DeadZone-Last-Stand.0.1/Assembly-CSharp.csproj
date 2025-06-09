@@ -79,6 +79,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\scripts\VidaJugador.cs" />
+    <Compile Include="Assets\scripts\Incio.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\scripts\ZombieBasico.cs" />
     <Compile Include="Assets\scripts\ControldeCadaArma.cs" />
     <Compile Include="Assets\scripts\ActivadorDeArma.cs" />
+    <Compile Include="Assets\scripts\KillsManager.cs" />
     <Compile Include="Assets\scripts\Arma.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>

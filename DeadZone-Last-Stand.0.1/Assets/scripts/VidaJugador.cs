@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VidaJugador : MonoBehaviour
@@ -11,6 +12,16 @@ public class VidaJugador : MonoBehaviour
     void Start()
     {
         vidaActual = vidaMaxima;
+
+        if (barraVida != null)
+        {
+            barraVida.minValue = 0;
+            barraVida.maxValue = vidaMaxima;
+            barraVida.value = vidaActual;
+            barraVida.interactable = false; // Esto asegura que no puedes moverla
+            barraVida.wholeNumbers = true;  // Para que no muestre decimales
+        }
+
         ActualizarBarra();
     }
 
@@ -41,13 +52,23 @@ public class VidaJugador : MonoBehaviour
     {
         if (barraVida != null)
         {
-            barraVida.value = (float)vidaActual / vidaMaxima;
+            barraVida.value = vidaActual;
         }
     }
 
     void Morir()
     {
         Debug.Log("¡Jugador muerto!");
-        // Lógica de fin de juego
+
+        // Guardar récord de kills 
+        if (KillsManager.Instance != null)
+        {
+            KillsManager.Instance.CheckAndSaveBestKills();
+        }
+
+        Destroy(gameObject);
+
+        // Cambiar a la escena "MenuInicial"
+        SceneManager.LoadScene("MenuInicial");
     }
 }

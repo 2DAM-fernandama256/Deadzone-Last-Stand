@@ -3,7 +3,8 @@ using PlayFab;
 using PlayFab.ClientModels;           
 using UnityEngine;                    
 using UnityEngine.UI;                
-using TMPro;                      
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class IniciarSesionPlayFab : MonoBehaviour
 {
@@ -33,10 +34,49 @@ public class IniciarSesionPlayFab : MonoBehaviour
     private string _playFabId;
     private string _sessionTicket;
 
-    // Al iniciar la escena, se muestra el panel de login
+
+    private static IniciarSesionPlayFab instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            // Aquí puedes cargar los datos de PlayerPrefs para restaurar sesión al iniciar el juego
+            if (PlayerPrefs.HasKey("PLAYFAB_ID") && PlayerPrefs.HasKey("SESSION_TICKET"))
+            {
+                _playFabId = PlayerPrefs.GetString("PLAYFAB_ID");
+                _sessionTicket = PlayerPrefs.GetString("SESSION_TICKET");
+                // Configurar UI para sesión activa
+                loginPanel.SetActive(false);
+                registerPanel.SetActive(false);
+                gamePanel.SetActive(true);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        VerPanelLogin();
+        if (Inicio.desdeInicio)
+        {
+
+            VerPanelLogin();
+            Inicio.desdeInicio = false; 
+
+        }
+        else
+        {
+            // Ocultar login y mostrar el menú principal directamente
+            loginPanel.SetActive(false);
+            registerPanel.SetActive(false);
+            gamePanel.SetActive(true);
+        }
     }
 
     #region Login

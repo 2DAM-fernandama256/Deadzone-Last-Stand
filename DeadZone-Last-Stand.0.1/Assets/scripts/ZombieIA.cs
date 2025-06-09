@@ -22,6 +22,8 @@ public class ZombieIA : MonoBehaviour
     private float vidaActual;
     private Rigidbody2D rb;
 
+
+    private bool isDead = false;
     void Start()
     {
         // Configurar componentes
@@ -111,10 +113,15 @@ public class ZombieIA : MonoBehaviour
         }
     }
 
-    private void Morir()
+
+
+    public void Morir()
     {
+        if (isDead) return;
+        isDead = true;
+
         SoltarDrop();
-        Destroy(gameObject);
+        Destroy(gameObject);  
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -157,6 +164,12 @@ public class ZombieIA : MonoBehaviour
             else
                 Debug.Log("qqqqqqqqqqqqqqq");
             
+        }
+        // Añadir una kill
+        if (KillsManager.Instance != null)
+        {
+            KillsManager.Instance.AddKill();
+            Debug.Log("Kill añadida");
         }
     }
 
