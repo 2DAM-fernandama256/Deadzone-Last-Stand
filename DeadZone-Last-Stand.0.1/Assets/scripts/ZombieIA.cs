@@ -15,6 +15,8 @@ public class ZombieIA : MonoBehaviour
     [SerializeField] private float velocidadRotacion = 5f;
     [SerializeField] private bool mirarAlJugador = true;
 
+    
+
     private Transform jugador;
     private NavMeshAgent agente;
     private float vidaActual;
@@ -27,7 +29,7 @@ public class ZombieIA : MonoBehaviour
         if (rb == null)
         {
             rb = GetComponent<Rigidbody2D>();
-            rb.isKinematic = true; // ← Esto evita el empuje físico
+            rb.bodyType = RigidbodyType2D.Kinematic;
             rb.freezeRotation = true;
         }
 
@@ -136,25 +138,27 @@ public class ZombieIA : MonoBehaviour
         {
             VidaJugador vida = GameObject.FindGameObjectWithTag("Player")?.GetComponent<VidaJugador>();
             if (vida != null) vida.Curar(25);
+            Debug.Log("cura");
+
+
         }
         else if (rand < 0.6f)
         {
+            Jugador controlDisparo = GameObject.FindGameObjectWithTag("Player") ? .GetComponent<Jugador>();
             Debug.Log("Drop: +15 balas");
+            controlDisparo.AniadirBalas(15); 
+
         }
         else if (rand < 0.8f)
         {
-            EconomyManager economia = FindObjectOfType<EconomyManager>();
-            if (economia != null) economia.AddMoney(10);
+
+            if(EconomyManager.Instance.AddMoney(20))
+            Debug.Log("aaaaaaaaaaaaaa");
+            else
+                Debug.Log("qqqqqqqqqqqqqqq");
+            
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        // Debug visual de la dirección al jugador
-        if (jugador != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, jugador.position);
-        }
-    }
+   
 }

@@ -19,6 +19,7 @@ public class MoneyTextUpdater : MonoBehaviour
         if (moneyText != null)
         {
             moneyText.text = EconomyManager.Instance.GetCurrentMoney().ToString();
+            
         }
     }
 

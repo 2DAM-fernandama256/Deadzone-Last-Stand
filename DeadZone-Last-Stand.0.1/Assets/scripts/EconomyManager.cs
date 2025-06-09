@@ -11,16 +11,16 @@ public class EconomyManager : MonoBehaviour
 
     private List<MoneyTextUpdater> moneyTexts = new List<MoneyTextUpdater>();// Valor por defecto
 
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);  
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Evita duplicados
         }
     }
 
@@ -71,13 +71,20 @@ public class EconomyManager : MonoBehaviour
     }
 
     // Método público para agregar dinero 
-    public void AddMoney(int amount)
+    public bool AddMoney(int amount)
     {
+        if (amount <= 0)
+        {
+            Debug.LogWarning("No se puede agregar una cantidad negativa o cero.");
+            return false;
+        }
+
         _playerMoney += amount;
         SavePlayerMoney();
         UpdateMoneyUI();
 
         Debug.Log($"Se agregaron {amount} monedas. Total: {_playerMoney}");
+        return true; // Operación exitosa
     }
 
     // Método público para gastar dinero

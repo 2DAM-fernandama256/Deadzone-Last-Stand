@@ -43,6 +43,8 @@ public class Jugador : MonoBehaviour
         armaActual = ArmaManager.ObtenerArma();
         tiempoActualEntreDisparos = tiempoEntreDisparosBase;
         Debug.Log("Arma equipada: " + armaActual.nombre);
+        string mensaje = $"{armaActual.balasActuales}/{armaActual.totalBalas}";
+        mensajeDisparoTexto.text = mensaje;
     }
 
     private void Update()
@@ -136,4 +138,28 @@ public class Jugador : MonoBehaviour
             Debug.LogWarning("No hay balas disponibles para disparar.");
         }
     }
+
+    public void AniadirBalas(int cantidad)
+    {
+        if (cantidad <= 0)
+        {
+            Debug.LogWarning("Intentaste añadir una cantidad no válida de balas.");
+            return;
+        }
+
+        armaActual.totalBalas += cantidad;
+
+        // Asegúrate de que balas actuales no excedan las totales
+        armaActual.balasActuales = Mathf.Min(armaActual.balasActuales, armaActual.totalBalas);
+
+        // Actualizar UI
+        if (mensajeDisparoTexto != null)
+        {
+            string mensaje = $"{armaActual.balasActuales}/{armaActual.totalBalas}";
+            mensajeDisparoTexto.text = mensaje;
+        }
+
+        Debug.Log($"Se añadieron {cantidad} balas. Total: {armaActual.totalBalas}");
+    }
+
 }

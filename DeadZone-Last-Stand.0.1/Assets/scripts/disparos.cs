@@ -54,6 +54,19 @@ public class Bala : MonoBehaviour
     {
         if (objetoColisionado == null) return;
 
+        // Si el objeto tiene el tag "Zombie", intentamos hacerle daño
+        if (objetoColisionado.CompareTag("enemigos"))
+        {
+            ZombieIA zombie = objetoColisionado.GetComponent<ZombieIA>();
+            if (zombie != null)
+            {
+                zombie.RecibirDanio(danio);
+            }
+
+            DestruirBala();
+            return;
+        }
+
         foreach (string tag in tagsDestruccion)
         {
             if (string.IsNullOrEmpty(tag)) continue;
@@ -62,7 +75,6 @@ public class Bala : MonoBehaviour
             {
                 if (objetoColisionado.CompareTag(tag))
                 {
-                    
                     DestruirBala();
                     return;
                 }
