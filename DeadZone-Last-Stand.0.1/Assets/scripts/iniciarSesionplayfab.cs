@@ -1,34 +1,33 @@
-﻿
-using PlayFab;                         
-using PlayFab.ClientModels;           
-using UnityEngine;                    
-using UnityEngine.UI;                
+﻿using PlayFab;
+using PlayFab.ClientModels;
+using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
 public class IniciarSesionPlayFab : MonoBehaviour
 {
-    
+
     [Header("UI References - Login")]
-    public TMP_InputField emailInput;              
-    public TMP_InputField passwordInput;          
-    public TextMeshProUGUI loginStatusText;        
-    public GameObject loginPanel;                 
+    public TMP_InputField emailInput;
+    public TMP_InputField passwordInput;
+    public TextMeshProUGUI loginStatusText;
+    public GameObject loginPanel;
 
     // Referencias UI para el panel de Registro
     [Header("UI References - Register")]
-    public TMP_InputField registerEmailInput;      
-    public TMP_InputField registerPasswordInput;   
-    public TMP_InputField usernameInput;           
-    public TextMeshProUGUI registerStatusText;     
-    public GameObject registerPanel;               
+    public TMP_InputField registerEmailInput;
+    public TMP_InputField registerPasswordInput;
+    public TMP_InputField usernameInput;
+    public TextMeshProUGUI registerStatusText;
+    public GameObject registerPanel;
 
     // Configuración general
     [Header("Configuración")]
-    public float minimoTamanioPass = 6;            
-    public GameObject loadingSpinner;             
+    public float minimoTamanioPass = 6;
+    public GameObject loadingSpinner;
 
-    public GameObject gamePanel;                   
+    public GameObject gamePanel;
 
     // Almacena datos de sesión devueltos por PlayFab
     private string _playFabId;
@@ -65,13 +64,14 @@ public class IniciarSesionPlayFab : MonoBehaviour
     {
         if (Inicio.desdeInicio)
         {
-
+            Debug.Log("Iniciando desde el menú principal, mostrando panel de login");
             VerPanelLogin();
-            Inicio.desdeInicio = false; 
+            
 
         }
         else
         {
+            Debug.Log("Iniciando desde el juego, mostrando panel de juego directamente");
             // Ocultar login y mostrar el menú principal directamente
             loginPanel.SetActive(false);
             registerPanel.SetActive(false);
@@ -104,22 +104,23 @@ public class IniciarSesionPlayFab : MonoBehaviour
         // Enviar solicitud de login a PlayFab
         PlayFabClientAPI.LoginWithEmailAddress(request, SucesoLogin, OnLoginFailure);
         loginStatusText.text = "Iniciando sesion...";
+        
     }
 
     // Validación de campos de login
     private bool ValidartextosLogin()
     {
-        bool esValido = true; 
+        bool esValido = true;
         if (string.IsNullOrWhiteSpace(emailInput.text))
         {
             loginStatusText.text = "Por favor ingresa tu email";
-            esValido= false;
+            esValido = false;
         }
 
         if (string.IsNullOrWhiteSpace(passwordInput.text))
         {
-            loginStatusText.text = "Por favor ingresa tu contraseña"; 
-            esValido= false;
+            loginStatusText.text = "Por favor ingresa tu contraseña";
+            esValido = false;
         }
 
         if (!ValidarEmail(emailInput.text.Trim()))
@@ -147,7 +148,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
             return;
 
         loadingSpinner.SetActive(true);
-        SetInteractable(false); 
+        SetInteractable(false);
 
         // Crear solicitud de registro
         var request = new RegisterPlayFabUserRequest
@@ -207,7 +208,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
     }
 
     // Muestra el panel de registro y limpia el contenido previo
-    public void VerPanelRegistro() 
+    public void VerPanelRegistro()
     {
         loginPanel.SetActive(false);
         registerPanel.SetActive(true);
@@ -218,7 +219,8 @@ public class IniciarSesionPlayFab : MonoBehaviour
     // Muestra el panel de login y limpia su contenido
     public void VerPanelLogin()
     {
-        registerPanel.SetActive(false); 
+        registerPanel.SetActive(false);
+        gamePanel.SetActive(false);
         loginPanel.SetActive(true);
         loginStatusText.text = "";
         LimpiarInputsLogin();
@@ -244,7 +246,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
     // Callback: éxito en login
     private void SucesoLogin(LoginResult result)
     {
-        loadingSpinner.SetActive(false); 
+        loadingSpinner.SetActive(false);
         SetInteractable(true);
 
         // Guardamos datos de sesion
@@ -257,6 +259,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
 
         loginStatusText.text = "¡Bienvenido!";
         Debug.Log("Login exitoso");
+        Inicio.desdeInicio = false;
 
         // Cambiamos al panel del juego
         loginPanel.SetActive(false);
@@ -365,4 +368,3 @@ public class IniciarSesionPlayFab : MonoBehaviour
         loginStatusText.text = "Sesión cerrada";
     }
 }
-

@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class MenuInicial : MonoBehaviour
 {
 
-    public void Start()
-    {
-        if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
-        {
+    //public void Start()
+    //{
+    //    if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
+    //    {
 
-            PlayFabSettings.staticSettings.TitleId = "42";
-        }
-        var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
-    }
+    //        PlayFabSettings.staticSettings.TitleId = "42";
+    //    }
+    //    var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
+    //    PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
+    //}
 
 
 

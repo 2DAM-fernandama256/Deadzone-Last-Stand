@@ -10,13 +10,14 @@ public class EconomyManager : MonoBehaviour
     private int _playerMoney = 50;
 
     private List<MoneyTextUpdater> moneyTexts = new List<MoneyTextUpdater>();// Valor por defecto
+    private bool iscargado = false; 
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -24,10 +25,16 @@ public class EconomyManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void Update()
     {
-        LoadPlayerMoney();
+        if (!iscargado && PlayFabClientAPI.IsClientLoggedIn() && !Inicio.desdeInicio)
+        {
+            Debug.Log("Cargando dinero del jugador desde PlayFab...");
+            iscargado = true;
+            LoadPlayerMoney();
+        }
     }
+
 
     // Cargar dinero del jugador desde PlayFab
     public void LoadPlayerMoney()
