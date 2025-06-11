@@ -9,7 +9,7 @@ public class ZombieIA : MonoBehaviour
     [Header("Valores por Defecto")]
     [SerializeField] private float velocidadDefault = 3.5f;
     [SerializeField] private float vidaDefault = 100f;
-    [SerializeField] private float danioDefault = 10f;
+    [SerializeField] private int danioDefault = 10;
 
     [Header("Rotación")]
     [SerializeField] private float velocidadRotacion = 5f;
@@ -64,6 +64,7 @@ public class ZombieIA : MonoBehaviour
         }
         else
         {
+            Debug.Log($"Zombie {gameObject.name} está usando DATOS DEL SCRIPTABLE OBJECT (Velocidad: {datos.velocidad}, Vida: {datos.vida})");
             agente.speed = datos.velocidad;
             vidaActual = datos.vida;
         }
@@ -131,8 +132,10 @@ public class ZombieIA : MonoBehaviour
             VidaJugador vida = other.gameObject.GetComponent<VidaJugador>();
             if (vida != null)
             {
-                float danio = datos != null ? datos.danio : danioDefault;
-                vida.RecibirDanio(10);
+                int danio = datos != null ? datos.danio : danioDefault;
+                Debug.Log(danio);
+
+                vida.RecibirDanio(danio);
             }
         }
     }

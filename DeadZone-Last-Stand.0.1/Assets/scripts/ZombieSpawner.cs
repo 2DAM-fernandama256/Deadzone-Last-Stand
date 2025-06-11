@@ -9,6 +9,12 @@ public class ZombieSpawner : MonoBehaviour
     public GameObject zombieTanquePrefab;
     public GameObject zombieMutantePrefab;
 
+    [Header("Datos ScriptableObject de cada tipo de zombie")]
+    public Zombie zombieBasicoData;
+    public Zombie zombieRapidoData;
+    public Zombie zombieTanqueData;
+    public Zombie zombieMutanteData;
+
 
 
     [Header("Puntos de aparición")]
@@ -31,11 +37,11 @@ public class ZombieSpawner : MonoBehaviour
 
     void Start()
     {
-        // Cargar cada tipo de zombie con su prefab y comportamiento
-        tiposZombies.Add(new TipoZombie(new ZombieBasico(), zombieBasicoPrefab));
-        tiposZombies.Add(new TipoZombie(new ZombieRapido(), zombieRapidoPrefab));
-        tiposZombies.Add(new TipoZombie(new ZombieTanque(), zombieTanquePrefab));
-        tiposZombies.Add(new TipoZombie(new ZombieMutante(), zombieMutantePrefab));
+        tiposZombies.Add(new TipoZombie(zombieBasicoData, zombieBasicoPrefab));
+        tiposZombies.Add(new TipoZombie(zombieRapidoData, zombieRapidoPrefab));
+        tiposZombies.Add(new TipoZombie(zombieTanqueData, zombieTanquePrefab));
+        tiposZombies.Add(new TipoZombie(zombieMutanteData, zombieMutantePrefab));
+
 
         // Spawnea una tanda inicial
         for (int i = 0; i < 10; i++)

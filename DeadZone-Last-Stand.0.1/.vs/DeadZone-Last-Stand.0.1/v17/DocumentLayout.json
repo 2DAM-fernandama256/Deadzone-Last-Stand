@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombieia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombieia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombiebasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiebasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombiespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuinicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombierapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombierapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\zombietanque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombietanque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombiemutnate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiemutnate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\activadordearma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\activadordearma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iniciarsesionplayfab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\incio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\killsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombieia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombieia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\moneytextupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\moneytextupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,32 +75,12 @@
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\seleccionararmaui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\activadordearma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\activadordearma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\arma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombierapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombierapido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movimiento_jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombiebasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiebasico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\zombiemutnate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\zombiemutnate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\movimientospinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -103,18 +107,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ControldeCadaArma.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ControldeCadaArma.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
-              "RelativeToolTip": "Assets\\scripts\\ControldeCadaArma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ZombieTanque.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieTanque.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieTanque.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieTanque.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieTanque.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:22:08.708Z"
+              "WhenOpened": "2025-06-11T07:45:10.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ActivadorDeArma.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ActivadorDeArma.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ActivadorDeArma.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ActivadorDeArma.cs",
+              "RelativeToolTip": "Assets\\scripts\\ActivadorDeArma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T18:15:45.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ZombieSpawner.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieSpawner.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieSpawner.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieSpawner.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T07:47:47.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ZombieRapido.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieRapido.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieRapido.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieRapido.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieRapido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T10:09:22.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ZombieIA.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieIA.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieIA.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieIA.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieIA.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAIwIkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T07:49:17.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Incio.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Incio.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\Incio.cs",
@@ -126,20 +183,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IniciarSesionplayfab.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\IniciarSesionplayfab.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\IniciarSesionplayfab.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\IniciarSesionplayfab.cs",
-              "RelativeToolTip": "Assets\\scripts\\IniciarSesionplayfab.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAQwN4AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ControldeCadaArma.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ControldeCadaArma.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ControldeCadaArma.cs",
+              "RelativeToolTip": "Assets\\scripts\\ControldeCadaArma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T19:24:50.853Z",
+              "WhenOpened": "2025-06-10T09:22:08.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuInicial.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MenuInicial.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
+              "RelativeToolTip": "Assets\\scripts\\MenuInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T06:36:50.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
+              "Title": "Zombie.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Zombie.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Zombie.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Zombie.cs",
+              "RelativeToolTip": "Assets\\scripts\\Zombie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T10:32:57.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ZombieMutnate.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieMutnate.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieMutnate.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieMutnate.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieMutnate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T18:33:25.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ZombieBasico.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieBasico.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieBasico.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieBasico.cs",
+              "RelativeToolTip": "Assets\\scripts\\ZombieBasico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T10:32:15.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EconomyManager.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\EconomyManager.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\EconomyManager.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T09:48:53.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "SeleccionarArmaUI.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\SeleccionarArmaUI.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\SeleccionarArmaUI.cs",
@@ -151,82 +272,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ActivadorDeArma.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ActivadorDeArma.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ActivadorDeArma.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ActivadorDeArma.cs",
-              "RelativeToolTip": "Assets\\scripts\\ActivadorDeArma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IniciarSesionplayfab.cs",
+              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\IniciarSesionplayfab.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\IniciarSesionplayfab.cs",
+              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\IniciarSesionplayfab.cs",
+              "RelativeToolTip": "Assets\\scripts\\IniciarSesionplayfab.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAQwN4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T18:15:45.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ZombieSpawner.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieSpawner.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieSpawner.cs",
-              "RelativeToolTip": "Assets\\scripts\\ZombieSpawner.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:47:47.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T19:24:50.853Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ZombieRapido.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieRapido.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieRapido.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieRapido.cs",
-              "RelativeToolTip": "Assets\\scripts\\ZombieRapido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:09:22.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ZombieIA.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieIA.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieIA.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieIA.cs",
-              "RelativeToolTip": "Assets\\scripts\\ZombieIA.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowHsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T07:49:17.393Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EconomyManager.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\EconomyManager.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\EconomyManager.cs",
-              "RelativeToolTip": "Assets\\scripts\\EconomyManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:48:53.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuInicial.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\MenuInicial.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MenuInicial.cs",
-              "RelativeToolTip": "Assets\\scripts\\MenuInicial.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwCAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T06:36:50.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "KillsManager.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\KillsManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\KillsManager.cs",
@@ -238,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "VidaJugador.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\VidaJugador.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\VidaJugador.cs",
@@ -250,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Movimiento_jugador.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Movimiento_jugador.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\Movimiento_jugador.cs",
@@ -262,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "Disparos.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Disparos.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\Disparos.cs",
@@ -274,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "MoneyTextUpdater.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MoneyTextUpdater.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\MoneyTextUpdater.cs",
@@ -286,19 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ZombieBasico.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieBasico.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieBasico.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieBasico.cs",
-              "RelativeToolTip": "Assets\\scripts\\ZombieBasico.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:32:15.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Arma.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Arma.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\Arma.cs",
@@ -310,31 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Zombie.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Zombie.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Zombie.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Zombie.cs",
-              "RelativeToolTip": "Assets\\scripts\\Zombie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:32:57.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ZombieMutnate.cs",
-              "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieMutnate.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\ZombieMutnate.cs",
-              "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\ZombieMutnate.cs",
-              "RelativeToolTip": "Assets\\scripts\\ZombieMutnate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T18:33:25.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MovimientoSpinner.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MovimientoSpinner.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\MovimientoSpinner.cs",
