@@ -79,18 +79,37 @@ public class KillsManager : MonoBehaviour
 
     private void SaveBestKills()
     {
-        var request = new UpdateUserDataRequest
+        // 1. Guardar en PlayerData (como ya haces)
+        var userDataRequest = new UpdateUserDataRequest
         {
             Data = new Dictionary<string, string>
-            {
-                { "kills", bestKills.ToString() }
-            }
+        {
+            { "kills", bestKills.ToString() }
+        }
         };
 
-        PlayFabClientAPI.UpdateUserData(request,
-            result => Debug.Log("Récord de kills guardado: " + bestKills),
-            error => Debug.LogError("Error al guardar kills en PlayFab: " + error.GenerateErrorReport()));
+        PlayFabClientAPI.UpdateUserData(userDataRequest,
+            result => Debug.Log("Récord de kills guardado en PlayerData: " + bestKills),
+            error => Debug.LogError("Error al guardar kills en PlayerData: " + error.GenerateErrorReport()));
+
+        // 2. Guardar en PlayerStatistics (para ranking)
+        var statsRequest = new UpdatePlayerStatisticsRequest
+        {
+            Statistics = new List<StatisticUpdate>
+        {
+            new StatisticUpdate
+            {
+                StatisticName = "kills", 
+                Value = bestKills
+            }
+        }
+        };
+
+        PlayFabClientAPI.UpdatePlayerStatistics(statsRequest,
+            result => Debug.Log("Récord de kills enviado a estadísticas (ranking): " + bestKills),
+            error => Debug.LogError("Error al guardar kills en estadísticas: " + error.GenerateErrorReport()));
     }
+
 
     public int GetCurrentKills() => currentKills;
     public int GetBestKills() => bestKills;
