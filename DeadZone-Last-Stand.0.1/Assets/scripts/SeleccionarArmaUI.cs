@@ -5,13 +5,13 @@ public class SeleccionarArmaUI : MonoBehaviour
 {
     public static string armaSeleccionada = null;  
 
-    // Referencia al script MenuInicial  
+    
     public MenuInicial menuInicial;
 
-    // Esta función debe llamarse desde el botón de cada arma  
+ 
     public void SeleccionarArma()
     {
-        string nombreArma = gameObject.name; // El nombre del botón = nombre del arma  
+        string nombreArma = gameObject.name; // El nombre del boton = nombre del arma  
 
         int costo = ObtenerCostoArma(nombreArma);
 
@@ -22,7 +22,7 @@ public class SeleccionarArmaUI : MonoBehaviour
             Debug.Log($"[UI] Arma {nombreArma} seleccionada correctamente.");
             armaSeleccionada = nombreArma;
 
-            // Usar la referencia de instancia para llamar al método jugar  
+            // Usar la referencia de instancia para llamar al metodo jugar  
             if (menuInicial != null)
             {
                 menuInicial.jugar();
@@ -38,15 +38,15 @@ public class SeleccionarArmaUI : MonoBehaviour
         }
     }
 
-    // Costo de cada arma según su nombre  
+    // Costo de cada arma segun su nombre  
     private int ObtenerCostoArma(string nombreArma)
     {
         switch (nombreArma)
         {
-            case "Pistola": return 0;   // Gratis o ya equipada  
+            case "Pistola": return 0;   // Gratis  
             case "Escopeta": return 200;
-            case "Fusil": return 300;
-            case "Francotirador": return 500;
+            case "Fusil": return 500;
+            case "Francotirador": return 300;
             default:
                 Debug.LogWarning($"[UI] Costo no definido para el arma {nombreArma}");
                 return 9999;

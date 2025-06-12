@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class arma
 {
-    public string nombre;      // Nombre del arma 
-    public int nivel;      // Nivel actual de mejora 
-    public float danio;          // Daño base del arma
+    public string nombre;     
+    public int nivel;      
+    public float danio;          
     public float distancia;  // Alcance máximo de las balas
     public int cargador;      // Tamaño del cargador 
     public int balasActuales;       // Balas actuales en el cargador
@@ -23,7 +23,7 @@ public class arma
         this.totalBalas = totalBalas;        // Munición total inicial
     }
 
-    // Método para recargar el arma
+    // Metodo para recargar el arma
     public void Recargar()
     {
         int needed = cargador - balasActuales;
@@ -33,7 +33,7 @@ public class arma
         totalBalas -= available;
     }
 
-    // Método para disparar (reduce la munición)
+    // Metodo para disparar (reduce la municion)
     public bool Disparar()
     {
         if (balasActuales > 0)

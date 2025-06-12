@@ -7,11 +7,12 @@ public class Bala : MonoBehaviour
     private float velocidad;
     private Vector2 puntoInicial;
     private Rigidbody2D rb;
-    private bool esPrefab = true;
+    private bool esPrefab = true;// sie es prefab no se puede eliminar ya que si no daria un error
 
-    // Tags por defecto que funcionarán incluso si no están asignados en el Inspector
+    // Tags para diferenciar las paredes y enemigos
     private string[] tagsDestruccion = { "paredes", "enemigos" };
 
+    //Coge los datos del arma seleccionada
     public void Configurar(float danio, float distancia, float velocidad, Vector2 direccion)
     {
         this.danio = danio;
@@ -54,7 +55,7 @@ public class Bala : MonoBehaviour
     {
         if (objetoColisionado == null) return;
 
-        // Si el objeto tiene el tag "Zombie", intentamos hacerle daño
+        // Si tiene el tag "Zombie" hacemos daño
         if (objetoColisionado.CompareTag("enemigos"))
         {
             ZombieIA zombie = objetoColisionado.GetComponent<ZombieIA>();
@@ -66,7 +67,7 @@ public class Bala : MonoBehaviour
             DestruirBala();
             return;
         }
-
+        // verifica si tiene el tag "paredes" o "enemigos" para destruir la bala
         foreach (string tag in tagsDestruccion)
         {
             if (string.IsNullOrEmpty(tag)) continue;

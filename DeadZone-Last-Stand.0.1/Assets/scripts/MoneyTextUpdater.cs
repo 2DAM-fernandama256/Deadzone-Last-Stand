@@ -1,4 +1,4 @@
-using TMPro; // o UnityEngine.UI si usas UI Text
+using TMPro;
 using UnityEngine;
 
 public class MoneyTextUpdater : MonoBehaviour

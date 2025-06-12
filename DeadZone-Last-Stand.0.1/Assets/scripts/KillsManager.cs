@@ -26,7 +26,7 @@ public class KillsManager : MonoBehaviour
 
     private void Start()
     {
-        LoadBestKills();
+        CargarBestKills();
     }
 
     void Update()
@@ -37,18 +37,18 @@ public class KillsManager : MonoBehaviour
         }
     }
 
-    public void AddKill()
+    public void Aniadirkill()
     {
         currentKills++;
         Debug.Log("Kills actuales: " + currentKills);
     }
 
-    public void CheckAndSaveBestKills()
+    public void CompruebaGuardaBestKills()
     {
         if (currentKills > bestKills)
         {
             bestKills = currentKills;
-            SaveBestKills();
+            GuardarBestKills();
         }
         else
         {
@@ -56,7 +56,7 @@ public class KillsManager : MonoBehaviour
         }
     }
 
-    private void LoadBestKills()
+    private void CargarBestKills()
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(),
             result => {
@@ -68,7 +68,7 @@ public class KillsManager : MonoBehaviour
                 else
                 {
                     bestKills = 0;
-                    SaveBestKills(); // Primera vez: crear el dato
+                    GuardarBestKills(); // Primera vez: crear el dato
                     Debug.Log("No había récord, se creó uno nuevo con 0 kills.");
                 }
             },
@@ -77,9 +77,9 @@ public class KillsManager : MonoBehaviour
             });
     }
 
-    private void SaveBestKills()
+    private void GuardarBestKills()
     {
-        // 1. Guardar en PlayerData (como ya haces)
+        // 1. Guardar en PlayerData 
         var userDataRequest = new UpdateUserDataRequest
         {
             Data = new Dictionary<string, string>
@@ -92,7 +92,7 @@ public class KillsManager : MonoBehaviour
             result => Debug.Log("Récord de kills guardado en PlayerData: " + bestKills),
             error => Debug.LogError("Error al guardar kills en PlayerData: " + error.GenerateErrorReport()));
 
-        // 2. Guardar en PlayerStatistics (para ranking)
+        // 2. Guardar en PlayerStatistics 
         var statsRequest = new UpdatePlayerStatisticsRequest
         {
             Statistics = new List<StatisticUpdate>

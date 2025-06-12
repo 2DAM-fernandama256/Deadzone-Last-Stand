@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class EconomyManager : MonoBehaviour
 {
-    public static EconomyManager Instance; // Singleton para acceso facil
+    public static EconomyManager Instance; // instancia unica del manager
 
-    private int _playerMoney = 50;
+    private int playerMoney = 50; // Valor por defecto  
 
-    private List<MoneyTextUpdater> moneyTexts = new List<MoneyTextUpdater>();// Valor por defecto
+    private List<MoneyTextUpdater> moneyTexts = new List<MoneyTextUpdater>();//listado de los objetos que actualizan el dinero en la UI
     private bool iscargado = false; 
 
     private void Awake()
@@ -17,7 +17,7 @@ public class EconomyManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);// esta instancia no se destruye
         }
         else
         {
@@ -27,6 +27,7 @@ public class EconomyManager : MonoBehaviour
 
     void Update()
     {
+        // carga el dinero del jugador desde PlayFab una sola vez
         if (!iscargado && PlayFabClientAPI.IsClientLoggedIn() && !Inicio.desdeInicio)
         {
             Debug.Log("Cargando dinero del jugador desde PlayFab...");
@@ -43,13 +44,13 @@ public class EconomyManager : MonoBehaviour
             result => {
                 if (result.Data != null && result.Data.ContainsKey("PlayerMoney"))
                 {
-                    _playerMoney = int.Parse(result.Data["PlayerMoney"].Value);
-                    Debug.Log("Dinero cargado: " + _playerMoney);
+                    playerMoney = int.Parse(result.Data["PlayerMoney"].Value);
+                    Debug.Log("Dinero cargado: " + playerMoney);
                 }
                 else
                 {
-                    // Si no existe, guardamos el valor inicial 
-                    _playerMoney = 50;
+                    // Si no existe guardamos el valor inicial 
+                    playerMoney = 50;
                     SavePlayerMoney();
                 }
                 UpdateMoneyUI(); // Actualizar UI
@@ -57,19 +58,19 @@ public class EconomyManager : MonoBehaviour
             error => {
                 Debug.LogError("Error al cargar dinero: " + error.GenerateErrorReport());
                 // Usar valor por defecto si hay error
-                _playerMoney = 50;
+                playerMoney = 50;
                 UpdateMoneyUI();
             });
     }
 
-    // Guardar dinero en PlayFab
+    // Guardar/actualizar dinero en PlayFab 
     private void SavePlayerMoney()
     {
         var request = new UpdateUserDataRequest
         {
             Data = new Dictionary<string, string>
             {
-                {"PlayerMoney", _playerMoney.ToString()}
+                {"PlayerMoney", playerMoney.ToString()}
             }
         };
         PlayFabClientAPI.UpdateUserData(request,
@@ -86,20 +87,20 @@ public class EconomyManager : MonoBehaviour
             return false;
         }
 
-        _playerMoney += amount;
+        playerMoney += amount;
         SavePlayerMoney();
         UpdateMoneyUI();
 
-        Debug.Log($"Se agregaron {amount} monedas. Total: {_playerMoney}");
+        Debug.Log($"Se agregaron {amount} monedas. Total: {playerMoney}");
         return true; // Operación exitosa
     }
 
     // Método público para gastar dinero
     public bool SpendMoney(int amount)
     {
-        if (_playerMoney >= amount)
+        if (playerMoney >= amount)
         {
-            _playerMoney -= amount;
+            playerMoney -= amount;
             SavePlayerMoney();
             UpdateMoneyUI();
             return true; // Transacción exitosa
@@ -110,7 +111,7 @@ public class EconomyManager : MonoBehaviour
     // Obtener el dinero actual
     public int GetCurrentMoney()
     {
-        return _playerMoney;
+        return playerMoney;
     }
 
     // Actualizar la UI 
@@ -124,8 +125,10 @@ public class EconomyManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Dinero actual: " + _playerMoney);
+        Debug.Log("Dinero actual: " + playerMoney);
     }
+    // Registrar y desregistrar objetos que actualizan el texto del dinero
+    // esto hace que este constantenente actualizado en la UI
     public void RegisterMoneyText(MoneyTextUpdater updater)
     {
         if (!moneyTexts.Contains(updater))

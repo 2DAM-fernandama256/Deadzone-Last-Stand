@@ -35,7 +35,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-
+            // en esta instancia hay que guardar cuidadosamente el ID de PlayFab y el ticket de sesion
             if (PlayerPrefs.HasKey("PLAYFAB_ID") && PlayerPrefs.HasKey("SESSION_TICKET"))
             {
                 _playFabId = PlayerPrefs.GetString("PLAYFAB_ID");
@@ -89,7 +89,7 @@ public class IniciarSesionPlayFab : MonoBehaviour
         PlayFabClientAPI.LoginWithEmailAddress(request, SucesoLogin, OnLoginFailure);
         loginStatusText.text = "Iniciando sesión...";
     }
-
+    // validar textos del iniciar sesion
     private bool ValidartextosLogin()
     {
         if (string.IsNullOrWhiteSpace(emailInput.text))

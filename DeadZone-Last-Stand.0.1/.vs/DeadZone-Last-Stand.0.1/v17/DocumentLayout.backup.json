@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\movimientospinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movimientospinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ranking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MovimientoSpinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scripts\\MovimientoSpinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\seleccionararmaui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|d:\\deadzone-last-stand\\deadzone-last-stand.0.1\\assets\\scripts\\killsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\assets\\scripts\\killsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C21C159-8E82-5C39-AE3B-655FB13934E1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\killsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,13 +110,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Ranking.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Ranking.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\Ranking.cs",
               "ToolTip": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\Ranking.cs",
               "RelativeToolTip": "Assets\\scripts\\Ranking.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwC0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T13:16:44.79Z",
               "EditorCaption": ""
@@ -191,8 +191,7 @@
               "RelativeToolTip": "Assets\\scripts\\EconomyManager.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T09:48:53.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T09:48:53.677Z"
             },
             {
               "$type": "Document",
@@ -204,8 +203,7 @@
               "RelativeToolTip": "Assets\\scripts\\SeleccionarArmaUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T09:34:12.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T09:34:12.348Z"
             },
             {
               "$type": "Document",
@@ -217,12 +215,11 @@
               "RelativeToolTip": "Assets\\scripts\\IniciarSesionplayfab.cs",
               "ViewState": "AgIAADMBAAAAAAAAAAAYwEwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T19:24:50.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T19:24:50.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MovimientoSpinner.cs",
               "DocumentMoniker": "D:\\Deadzone-Last-Stand\\DeadZone-Last-Stand.0.1\\Assets\\scripts\\MovimientoSpinner.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\MovimientoSpinner.cs",
@@ -230,8 +227,7 @@
               "RelativeToolTip": "Assets\\scripts\\MovimientoSpinner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T09:47:39.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T09:47:39.237Z"
             },
             {
               "$type": "Document",
@@ -279,8 +275,7 @@
               "RelativeToolTip": "Assets\\scripts\\KillsManager.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAAAGMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:47:14.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T18:47:14.922Z"
             },
             {
               "$type": "Document",

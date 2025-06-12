@@ -9,12 +9,14 @@ public class ArmaManager : MonoBehaviour
     public static ArmaManager Instance;
     public static Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
 
+    //persistencia entre escenas
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Añade esto para persistencia entre escenas
+            DontDestroyOnLoad(gameObject); 
             Debug.Log("[ArmaManager] Instance creada");
         }
         else if (Instance != this)
@@ -30,7 +32,7 @@ public class ArmaManager : MonoBehaviour
         CargarArmasDesdePlayFab();
     }
 
-    // Método optimizado para cargar armas
+    // Metodo optimizado para cargar armas
     public void CargarArmasDesdePlayFab()
     {
         PlayFabClientAPI.GetUserData(new GetUserDataRequest(),
@@ -38,6 +40,7 @@ public class ArmaManager : MonoBehaviour
             error => ManejarErrorCarga(error));
     }
 
+    //carga el arma desde playfab o si no la tiene la introduce
     private void ProcesarDatosArmas(GetUserDataResult resultado)
     {
         armasJugador.Clear();
@@ -61,6 +64,7 @@ public class ArmaManager : MonoBehaviour
         if (huboCambios) GuardarArmasEnPlayFab();
     }
 
+    //lee el value del arma cargada 
     private void CargarArmaDesdeData(string nombre, string data)
     {
         string[] valores = data.Split(',');
@@ -80,24 +84,26 @@ public class ArmaManager : MonoBehaviour
             ActivarEstrellas(nombre, armaCargada.nivel);
         }
     }
-
+    //añade al diccionario el arma por defecto si no la tiene
     private void InicializarArmaPorDefecto(string nombre)
     {
         armasJugador[nombre] = ObtenerArmaPorDefecto(nombre);
         Debug.LogWarning($"Arma {nombre} no encontrada en PlayFab. Inicializando por defecto.");
     }
 
+    // Maneja errores al cargar armas desde PlayFab
     private void ManejarErrorCarga(PlayFabError error)
     {
         Debug.LogError("Error al cargar armas: " + error.GenerateErrorReport());
         InicializarArmasPorDefecto();
     }
 
+    // Activa las estrellas según el nivel del arma
     void ActivarEstrellas(string nombreArma, int nivel)
     {
         if (nivel <= 1) return; // Nivel 1 no muestra estrellas
 
-        string nombreCuadro = $"cuadro_{nombreArma.ToLower()}"; //porlo lo escribi en minusculas
+        string nombreCuadro = $"cuadro_{nombreArma.ToLower()}"; //porlo lo escribi en minusculas para evitar errores
         string prefijoEstrella = "";
 
         switch (nombreArma)
@@ -121,14 +127,14 @@ public class ArmaManager : MonoBehaviour
             Transform estrella = cuadro.transform.Find($"{prefijoEstrella}{i}");
             if (estrella != null)
             {
-                estrella.gameObject.SetActive(i <= nivel);
+                estrella.gameObject.SetActive(i <= nivel); //actiba las estrellas
             }
         }
     }
 
 
 
-    // Método para devolver arma por defecto según nombre
+    // Metodo para devolver un arma por defecto según nombre
     private arma ObtenerArmaPorDefecto(string nombre)
     {
         switch (nombre)
@@ -147,7 +153,7 @@ public class ArmaManager : MonoBehaviour
         }
     }
 
-    // Armas base con diferentes stats iniciales
+    // iniciaq todas las armas con valores por defecto
     private void InicializarArmasPorDefecto()
     {
         armasJugador["Pistola"] = new arma("Pistola", 1, 10, 10, 12, 60);
@@ -184,7 +190,7 @@ public class ArmaManager : MonoBehaviour
             Debug.Log("[ArmaManager] No hay suficiente dinero para mejorar " + nombreArma);
             esValido = false;
         }
-
+        //mejora por cada arma
         if (esValido)
         {
             arma.nivel++;
@@ -209,6 +215,8 @@ public class ArmaManager : MonoBehaviour
 
                 case "Francotirador":
                     arma.danio += 10f;
+                    arma.cargador += 1;
+
                     break;
             }
 
@@ -224,15 +232,15 @@ public class ArmaManager : MonoBehaviour
 
 
 
-    // Costo de mejora específico por arma
+    // Costo de mejora de armas
     private int ObtenerCostoMejora(string nombreArma)
     {
         switch (nombreArma)
         {
-            case "Pistola": return 10;
-            case "Escopeta": return 20;
-            case "Fusil": return 30;
-            case "Francotirador": return 40;
+            case "Pistola": return 50;
+            case "Escopeta": return 60;
+            case "Fusil": return 120;
+            case "Francotirador": return 80;
             default:
                 Debug.LogWarning("[ArmaManager] Nombre de arma desconocido para costo de mejora: " + nombreArma);
                 return 999;
@@ -267,7 +275,7 @@ public class ArmaManager : MonoBehaviour
 
 
 
-    // Método para obtener datos de un arma desde otro script (ej. UI)
+    // Metodo para obtener datos del arma desde otra escena
     public static arma ObtenerArma()    
     {
         string nombre = SeleccionarArmaUI.armaSeleccionada;

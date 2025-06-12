@@ -7,7 +7,7 @@ public class VidaJugador : MonoBehaviour
     public int vidaMaxima = 100;
     private int vidaActual;
 
-    public Slider barraVida; // Opcional
+    public Slider barraVida; 
 
     void Start()
     {
@@ -18,8 +18,8 @@ public class VidaJugador : MonoBehaviour
             barraVida.minValue = 0;
             barraVida.maxValue = vidaMaxima;
             barraVida.value = vidaActual;
-            barraVida.interactable = false; // Esto asegura que no puedes moverla
-            barraVida.wholeNumbers = true;  // Para que no muestre decimales
+            barraVida.interactable = false; // no muebe la barra con raton
+            barraVida.wholeNumbers = true;  // no decimales en la barra
         }
 
         ActualizarBarra();
@@ -63,7 +63,7 @@ public class VidaJugador : MonoBehaviour
         // Guardar récord de kills 
         if (KillsManager.Instance != null)
         {
-            KillsManager.Instance.CheckAndSaveBestKills();
+            KillsManager.Instance.CompruebaGuardaBestKills();
         }
 
         Destroy(gameObject);

@@ -171,7 +171,7 @@ public class ZombieIA : MonoBehaviour
         // Añadir una kill
         if (KillsManager.Instance != null)
         {
-            KillsManager.Instance.AddKill();
+            KillsManager.Instance.Aniadirkill();
             Debug.Log("Kill añadida");
         }
     }

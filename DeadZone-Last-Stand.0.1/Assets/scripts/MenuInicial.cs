@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuInicial : MonoBehaviour
 {
 
+    //esta clase se utilizo para saber si se ha conectado correctamente con playfab y tiene un metodo para cargar la siguiente escena
+
     //public void Start()
     //{
     //    if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
