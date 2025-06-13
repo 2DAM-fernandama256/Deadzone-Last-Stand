@@ -19,7 +19,10 @@ public class Jugador : MonoBehaviour
     [Header("Disparo")]
     [SerializeField] private GameObject prefabBala;
     [SerializeField] private Transform puntoDisparo;
-    [SerializeField] private float tiempoEntreDisparosBase = 0.3f; // Tiempo base entre disparos
+    [SerializeField] private float tiempoEntreDisparosBase = 0.3f;
+
+    public AudioSource audioDisparo;
+    public AudioSource audioRecarga;
 
     private Rigidbody2D rb;
     private Camera camara;
@@ -60,6 +63,11 @@ public class Jugador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             armaActual.Recargar();
+
+            if (audioRecarga != null)
+            {
+                audioRecarga.Play();
+            }
             Debug.Log("Recargando...");
         }
     }
@@ -126,6 +134,11 @@ public class Jugador : MonoBehaviour
             float velocidad = 15f + (armaActual.nivel * 2); // Velocidad base + bonus por nivel
 
             bala.Configurar(armaActual.danio, armaActual.distancia, velocidad, direccionDisparo);
+
+            if (audioDisparo != null)
+            {
+                audioDisparo.Play();
+            }
 
             // Reducir tiempo entre disparos según nivel (mínimo 0.1 segundos)
             tiempoActualEntreDisparos = Mathf.Max(0.1f, tiempoEntreDisparosBase * Mathf.Pow(0.9f, armaActual.nivel - 1));

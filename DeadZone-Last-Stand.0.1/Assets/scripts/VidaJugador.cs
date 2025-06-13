@@ -7,7 +7,9 @@ public class VidaJugador : MonoBehaviour
     public int vidaMaxima = 100;
     private int vidaActual;
 
-    public Slider barraVida; 
+    public GameObject panelFin;
+
+    public Slider barraVida;
 
     void Start()
     {
@@ -48,7 +50,7 @@ public class VidaJugador : MonoBehaviour
         Debug.Log("¡Jugador curado! Vida actual: " + vidaActual);
     }
 
-    void ActualizarBarra()
+    public void ActualizarBarra()
     {
         if (barraVida != null)
         {
@@ -56,7 +58,7 @@ public class VidaJugador : MonoBehaviour
         }
     }
 
-    void Morir()
+    public void Morir()
     {
         Debug.Log("¡Jugador muerto!");
 
@@ -66,9 +68,14 @@ public class VidaJugador : MonoBehaviour
             KillsManager.Instance.CompruebaGuardaBestKills();
         }
 
-        Destroy(gameObject);
+       
 
+        panelFin.SetActive(true);
+    }
+    public void volver()
+    {
         // Cambiar a la escena "MenuInicial"
         SceneManager.LoadScene("MenuInicial");
+        Destroy(gameObject);
     }
 }

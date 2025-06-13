@@ -7,8 +7,9 @@ public class SeleccionarArmaUI : MonoBehaviour
 
     
     public MenuInicial menuInicial;
+    public AudioSource audioError;
 
- 
+
     public void SeleccionarArma()
     {
         string nombreArma = gameObject.name; // El nombre del boton = nombre del arma  
@@ -35,6 +36,14 @@ public class SeleccionarArmaUI : MonoBehaviour
         else
         {
             Debug.LogWarning($"[UI] No tienes suficiente dinero para comprar {nombreArma}.");
+            if (audioError != null)
+            {
+                audioError.Play();
+            }
+            else
+            {
+                Debug.LogWarning("[UI] No se ha asignado un AudioSource para el sonido de error.");
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,10 +16,15 @@ public class ZombieSpawner : MonoBehaviour
     public Zombie zombieTanqueData;
     public Zombie zombieMutanteData;
 
-
-
-    [Header("Puntos de aparici�n")]
+    [Header("Puntos de aparición")]
     public Transform[] puntosSpawn;
+
+    [Header("Oleadas automáticas")]
+    public int cantidadInicial = 200;
+    public int incrementoPorMinuto = 50;
+    public float tiempoEntreOleadas = 60f;
+
+    private int cantidadZombiesActual;
 
     // Estructura de datos para tipos + prefab
     private struct TipoZombie
@@ -42,12 +48,16 @@ public class ZombieSpawner : MonoBehaviour
         tiposZombies.Add(new TipoZombie(zombieTanqueData, zombieTanquePrefab));
         tiposZombies.Add(new TipoZombie(zombieMutanteData, zombieMutantePrefab));
 
-
-        // Spawnea una tanda inicial
-        for (int i = 0; i < 10; i++)
+        // Spawnea la tanda inicial
+        cantidadZombiesActual = cantidadInicial;
+        for (int i = 0; i < cantidadZombiesActual; i++)
         {
             SpawnearZombieAleatorio();
+            Debug.Log($" Spawneado zombie {i + 1}/{cantidadZombiesActual}");
         }
+
+        // Inicia la generación automática
+        StartCoroutine(SpawnearZombiesCadaMinuto());
     }
 
     public void SpawnearZombieAleatorio()
@@ -61,5 +71,21 @@ public class ZombieSpawner : MonoBehaviour
 
         ZombieIA ia = zombieGO.GetComponent<ZombieIA>();
         ia.Configurar(tipoSeleccionado.datos);
+    }
+
+    private IEnumerator SpawnearZombiesCadaMinuto()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(tiempoEntreOleadas);
+
+            cantidadZombiesActual += incrementoPorMinuto;
+            Debug.Log($"🧟 Nueva oleada: {cantidadZombiesActual} zombies");
+
+            for (int i = 0; i < cantidadZombiesActual; i++)
+            {
+                SpawnearZombieAleatorio();
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ public class ArmaManager : MonoBehaviour
     public static Dictionary<string, arma> armasJugador = new Dictionary<string, arma>();
 
     //persistencia entre escenas
-
+    public AudioSource audioerror;
     void Awake()
     {
         if (Instance == null)
@@ -223,6 +223,12 @@ public class ArmaManager : MonoBehaviour
             ActivarEstrellas(nombreArma, arma.nivel);
 
             Debug.Log($"[ArmaManager] {nombreArma} mejorada a nivel {arma.nivel}");
+
+
+        }
+        if (!esValido && audioerror != null)
+        {
+            audioerror.Play();
         }
 
         GuardarArmasEnPlayFab();
