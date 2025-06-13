@@ -1,0 +1,39 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="IniciarSesionPlayFab">
+			<method name="botonloginClicked"/>
+			<method name="BotonRegistrarClicked"/>
+			<method name="VerPanelLogin"/>
+			<method name="VerPanelRegistro"/>
+		</type>
+		<type fullname="MenuInicial">
+			<method name="salir"/>
+			<method name="salir"/>
+			<method name="salir"/>
+		</type>
+		<type fullname="Ranking">
+			<method name="ActualizarRanking"/>
+		</type>
+		<type fullname="SeleccionarArmaUI">
+			<method name="SeleccionarArma"/>
+			<method name="SeleccionarArma"/>
+			<method name="SeleccionarArma"/>
+			<method name="SeleccionarArma"/>
+		</type>
+		<type fullname="VidaJugador">
+			<method name="volver"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+</linker>
